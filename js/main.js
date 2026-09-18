@@ -33,4 +33,15 @@
     }
   });
 
+  // Floating Go Top button
+  var goTopBtn = document.getElementById('goTopBtn');
+  if (goTopBtn) {
+    goTopBtn.addEventListener('click', function () {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+
 })();
