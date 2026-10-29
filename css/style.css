@@ -499,11 +499,12 @@ strong {
   padding: 0.25rem 0.65rem;
   border-radius: 99px;
   letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 
 .badge-hold {
-  background: #e0f0ff;
-  color: #1d4ed8;
+  background: #f1f5f9;
+  color: #475569;
 }
 
 .badge-buy {
@@ -685,6 +686,11 @@ strong {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   margin-bottom: 1rem;
+}
+
+.table-scroll .data-table-nowrap {
+  min-width: 480px;
+  white-space: nowrap;
 }
 
 /* Divider */
