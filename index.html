@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>STARCK Research</title>
-  <meta name="description" content="STARCK Research — 個人投資情報與分析平台，涵蓋今日市場情報、交易決策、波段交易決策與價值投資分析。">
+  <meta name="description" content="STARCK Research — 個人投資情報與分析平台，涵蓋今日市場情報、Zhu-Jiahong、Mark-Minervini、John-Larry-Kelly 與價值投資分析。">
   <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -18,8 +18,9 @@
     <nav>
       <ul class="nav-menu" id="navMenu">
         <li><a href="intelligence.html">今日市場情報</a></li>
-        <li><a href="strategy.html">交易決策</a></li>
-        <li><a href="swing.html">波段交易決策</a></li>
+        <li><a href="jiahong.html">Zhu-Jiahong</a></li>
+        <li><a href="swing.html">Mark-Minervini</a></li>
+        <li><a href="kelly.html">John-Larry-Kelly</a></li>
         <li><a href="value.html">價值投資分析</a></li>
       </ul>
     </nav>
@@ -31,8 +32,9 @@
 
 <nav class="nav-overlay" id="navOverlay" aria-label="行動選單">
   <a href="intelligence.html">今日市場情報</a>
-  <a href="strategy.html">交易決策</a>
-  <a href="swing.html">波段交易決策</a>
+  <a href="jiahong.html">Zhu-Jiahong</a>
+  <a href="swing.html">Mark-Minervini</a>
+  <a href="kelly.html">John-Larry-Kelly</a>
   <a href="value.html">價值投資分析</a>
 </nav>
 
@@ -48,19 +50,26 @@
       </div>
       <div class="index-card-desc">關鍵指數、資金流向、重大消息、市場情緒與聰明錢動向</div>
     </a>
-    <a class="index-card" href="strategy.html">
+    <a class="index-card" href="jiahong.html">
       <div class="index-card-header">
-        <div class="index-card-title">交易決策</div>
+        <div class="index-card-title">Zhu-Jiahong</div>
         <span class="index-card-date">2026/11/10</span>
       </div>
       <div class="index-card-desc">大盤趨勢、持股分析、法人籌碼與風控審查報告</div>
     </a>
     <a class="index-card" href="swing.html">
       <div class="index-card-header">
-        <div class="index-card-title">波段交易決策</div>
+        <div class="index-card-title">Mark-Minervini</div>
         <span class="index-card-date">2026/11/10</span>
       </div>
       <div class="index-card-desc">大盤環境、均線價量結構、持股交易策略與次日加減碼規劃</div>
+    </a>
+    <a class="index-card" href="kelly.html">
+      <div class="index-card-header">
+        <div class="index-card-title">John-Larry-Kelly</div>
+        <span class="index-card-date">2026/11/10</span>
+      </div>
+      <div class="index-card-desc">條件機率空間、分數凱利倉位配置、在險資金熱度與防破產鐵律</div>
     </a>
     <a class="index-card" href="value.html">
       <div class="index-card-header">
@@ -74,40 +83,41 @@
   <section class="section" style="margin-top: 3rem;">
     <h2 class="section-title">個股決策總覽</h2>
     <div class="table-scroll">
-      <table class="data-table data-table-nowrap" style="min-width: 480px; white-space: nowrap;">
+      <table class="data-table data-table-nowrap" style="min-width: 560px; white-space: nowrap;">
         <thead>
           <tr>
             <th>項目</th>
-            <th>交易決策</th>
-            <th>波段交易決策</th>
+            <th>Zhu-Jiahong</th>
+            <th>Mark-Minervini</th>
+            <th>John-Larry-Kelly</th>
           </tr>
         </thead>
         <tbody>
           <!-- 持股 -->
           <tr style="background: var(--color-bg-subtle);">
-            <td colspan="3" style="font-weight: 700; font-size: 0.85rem; color: var(--color-text); padding: 0.6rem 0.75rem; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">持股</td>
+            <td colspan="4" style="font-weight: 700; font-size: 0.85rem; color: var(--color-text); padding: 0.6rem 0.75rem; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">持股</td>
           </tr>
-          <tr><td class="stock">2383 台光電</td><td><span class="badge badge-hold">⚪ 續抱</span></td><td><span class="badge badge-hold">⚪ 續抱</span></td></tr>
-          <tr><td class="stock">2887 台新新光金</td><td><span class="badge badge-sell">🔴 撤資</span></td><td><span class="badge badge-sell">🔴 撤資</span></td></tr>
-          <tr><td class="stock">3443 創意</td><td><span class="badge badge-hold">⚪ 續抱</span></td><td><span class="badge badge-hold">⚪ 續抱</span></td></tr>
-          <tr><td class="stock">3533 嘉澤</td><td><span class="badge badge-sell">🔴 減碼</span></td><td><span class="badge badge-sell">🔴 減碼</span></td></tr>
-          <tr><td class="stock">3324 雙鴻</td><td><span class="badge badge-hold">⚪ 續抱</span></td><td><span class="badge badge-hold">⚪ 續抱</span></td></tr>
+          <tr><td class="stock">2383 台光電</td><td><span class="badge badge-hold">⚪ 續抱</span></td><td><span class="badge badge-hold">⚪ 續抱</span></td><td><span class="badge badge-hold">⚪ 續抱</span></td></tr>
+          <tr><td class="stock">2887 台新新光金</td><td><span class="badge badge-sell">🔴 撤資</span></td><td><span class="badge badge-sell">🔴 撤資</span></td><td><span class="badge badge-sell">🔴 撤資</span></td></tr>
+          <tr><td class="stock">3443 創意</td><td><span class="badge badge-hold">⚪ 續抱</span></td><td><span class="badge badge-hold">⚪ 續抱</span></td><td><span class="badge badge-hold">⚪ 續抱</span></td></tr>
+          <tr><td class="stock">3533 嘉澤</td><td><span class="badge badge-sell">🔴 減碼</span></td><td><span class="badge badge-sell">🔴 減碼</span></td><td><span class="badge badge-sell">🔴 減碼</span></td></tr>
+          <tr><td class="stock">3324 雙鴻</td><td><span class="badge badge-hold">⚪ 續抱</span></td><td><span class="badge badge-hold">⚪ 續抱</span></td><td><span class="badge badge-hold">⚪ 續抱</span></td></tr>
           <!-- 指定股票 -->
           <tr style="background: var(--color-bg-subtle);">
-            <td colspan="3" style="font-weight: 700; font-size: 0.85rem; color: var(--color-text); padding: 0.6rem 0.75rem; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">指定股票</td>
+            <td colspan="4" style="font-weight: 700; font-size: 0.85rem; color: var(--color-text); padding: 0.6rem 0.75rem; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">指定股票</td>
           </tr>
-          <tr><td class="stock">2327 國巨*</td><td><span class="badge badge-hold">⚪ 觀望</span></td><td><span class="badge badge-hold">⚪ 觀望</span></td></tr>
-          <tr><td class="stock">2408 南亞科</td><td><span class="badge badge-hold">⚪ 觀望</span></td><td><span class="badge badge-hold">⚪ 觀望</span></td></tr>
-          <tr><td class="stock">2409 友達</td><td><span class="badge badge-hold">⚪ 觀望</span></td><td><span class="badge badge-hold">⚪ 觀望</span></td></tr>
-          <tr><td class="stock">3325 雙鴻 (3324)</td><td><span class="badge badge-hold">⚪ 續抱</span></td><td><span class="badge badge-hold">⚪ 續抱</span></td></tr>
-          <tr><td class="stock">3529 力旺</td><td><span class="badge badge-hold">⚪ 觀望</span></td><td><span class="badge badge-hold">⚪ 觀望</span></td></tr>
-          <tr><td class="stock">3661 世芯-KY</td><td><span class="badge badge-hold">⚪ 觀望</span></td><td><span class="badge badge-hold">⚪ 觀望</span></td></tr>
-          <tr><td class="stock">4960 誠美材</td><td><span class="badge badge-hold">⚪ 觀望</span></td><td><span class="badge badge-hold">⚪ 觀望</span></td></tr>
-          <tr><td class="stock">5425 台半</td><td><span class="badge badge-hold">⚪ 觀望</span></td><td><span class="badge badge-hold">⚪ 觀望</span></td></tr>
-          <tr><td class="stock">5483 中美晶</td><td><span class="badge badge-hold">⚪ 觀望</span></td><td><span class="badge badge-hold">⚪ 觀望</span></td></tr>
-          <tr><td class="stock">6239 力成</td><td><span class="badge badge-hold">⚪ 觀望</span></td><td><span class="badge badge-hold">⚪ 觀望</span></td></tr>
-          <tr><td class="stock">6770 力積電</td><td><span class="badge badge-hold">⚪ 觀望</span></td><td><span class="badge badge-hold">⚪ 觀望</span></td></tr>
-          <tr><td class="stock">8086 宏捷科</td><td><span class="badge badge-hold">⚪ 觀望</span></td><td><span class="badge badge-hold">⚪ 觀望</span></td></tr>
+          <tr><td class="stock">2327 國巨*</td><td><span class="badge badge-hold">⚪ 觀望</span></td><td><span class="badge badge-hold">⚪ 觀望</span></td><td><span class="badge badge-hold">⚪ 觀望</span></td></tr>
+          <tr><td class="stock">2408 南亞科</td><td><span class="badge badge-hold">⚪ 觀望</span></td><td><span class="badge badge-hold">⚪ 觀望</span></td><td><span class="badge badge-hold">⚪ 觀望</span></td></tr>
+          <tr><td class="stock">2409 友達</td><td><span class="badge badge-hold">⚪ 觀望</span></td><td><span class="badge badge-hold">⚪ 觀望</span></td><td><span class="badge badge-hold">⚪ 觀望</span></td></tr>
+          <tr><td class="stock">3325 雙鴻 (3324)</td><td><span class="badge badge-hold">⚪ 續抱</span></td><td><span class="badge badge-hold">⚪ 續抱</span></td><td><span class="badge badge-hold">⚪ 續抱</span></td></tr>
+          <tr><td class="stock">3529 力旺</td><td><span class="badge badge-hold">⚪ 觀望</span></td><td><span class="badge badge-hold">⚪ 觀望</span></td><td><span class="badge badge-hold">⚪ 觀望</span></td></tr>
+          <tr><td class="stock">3661 世芯-KY</td><td><span class="badge badge-hold">⚪ 觀望</span></td><td><span class="badge badge-hold">⚪ 觀望</span></td><td><span class="badge badge-hold">⚪ 觀望</span></td></tr>
+          <tr><td class="stock">4960 誠美材</td><td><span class="badge badge-hold">⚪ 觀望</span></td><td><span class="badge badge-hold">⚪ 觀望</span></td><td><span class="badge badge-hold">⚪ 觀望</span></td></tr>
+          <tr><td class="stock">5425 台半</td><td><span class="badge badge-hold">⚪ 觀望</span></td><td><span class="badge badge-hold">⚪ 觀望</span></td><td><span class="badge badge-hold">⚪ 觀望</span></td></tr>
+          <tr><td class="stock">5483 中美晶</td><td><span class="badge badge-hold">⚪ 觀望</span></td><td><span class="badge badge-hold">⚪ 觀望</span></td><td><span class="badge badge-hold">⚪ 觀望</span></td></tr>
+          <tr><td class="stock">6239 力成</td><td><span class="badge badge-hold">⚪ 觀望</span></td><td><span class="badge badge-hold">⚪ 觀望</span></td><td><span class="badge badge-hold">⚪ 觀望</span></td></tr>
+          <tr><td class="stock">6770 力積電</td><td><span class="badge badge-hold">⚪ 觀望</span></td><td><span class="badge badge-hold">⚪ 觀望</span></td><td><span class="badge badge-hold">⚪ 觀望</span></td></tr>
+          <tr><td class="stock">8086 宏捷科</td><td><span class="badge badge-hold">⚪ 觀望</span></td><td><span class="badge badge-hold">⚪ 觀望</span></td><td><span class="badge badge-hold">⚪ 觀望</span></td></tr>
         </tbody>
       </table>
     </div>
