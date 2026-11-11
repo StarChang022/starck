@@ -2,89 +2,89 @@
 <html lang="zh-TW">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>價值投資分析 — STARCK Research</title>
-  <meta name="description" content="價值投資分析：五大估值模型、合理價區間、PEG 分析與巴菲特視角評語，涵蓋 22 支精選台股。">
-  <link rel="icon" type="image/png" href="images/favicon.png">
-  <link rel="stylesheet" href="css/style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>價值投資分析 — STARCK Research</title>
+	<meta name="description" content="價值投資分析：五大估值模型、合理價區間、PEG 分析與巴菲特視角評語，涵蓋 22 支精選台股。">
+	<link rel="icon" type="image/png" href="images/favicon.png">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="index.html" class="logo-link">
-        <img src="images/logo.png" alt="STARCK Research">
-      </a>
-      <nav>
-        <ul class="nav-menu">
-          <li><a href="intelligence.html">今日市場情報</a></li>
-          <li><a href="jiahong.html">Zhu-Jiahong</a></li>
-          <li><a href="swing.html">Mark-Minervini</a></li>
-          <li><a href="kelly.html">John-Larry-Kelly</a></li>
-          <li><a href="value.html" class="active">價值投資分析</a></li>
-        </ul>
-      </nav>
-      <button class="hamburger" id="hamburger" aria-label="開啟選單">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
+	<header class="site-header">
+		<div class="header-inner">
+			<a href="index.html" class="logo-link">
+				<img src="images/logo.png" alt="STARCK Research">
+			</a>
+			<nav>
+				<ul class="nav-menu" id="navMenu">
+					<li><a href="intelligence.html">今日市場情報</a></li>
+					<li><a href="jiahong.html">Jiahong</a></li>
+					<li><a href="swing.html">Minervini</a></li>
+					<li><a href="kelly.html">Kelly</a></li>
+					<li><a href="value.html">價值投資分析</a></li>
+				</ul>
+			</nav>
+			<button class="hamburger" id="hamburger" aria-label="開啟選單">
+				<span></span><span></span><span></span>
+			</button>
+		</div>
+	</header>
 
-  <nav class="nav-overlay" id="navOverlay">
-    <a href="intelligence.html">今日市場情報</a>
-    <a href="jiahong.html">Zhu-Jiahong</a>
-    <a href="swing.html">Mark-Minervini</a>
-    <a href="kelly.html">John-Larry-Kelly</a>
-    <a href="value.html" class="active">價值投資分析</a>
-  </nav>
+	<nav class="nav-overlay" id="navOverlay" aria-label="行動選單">
+		<a href="intelligence.html">今日市場情報</a>
+		<a href="jiahong.html">Jiahong</a>
+		<a href="swing.html">Minervini</a>
+		<a href="kelly.html">Kelly</a>
+		<a href="value.html">價值投資分析</a>
+	</nav>
 
-  <main class="page-wrapper">
-    <h1>價值投資分析</h1>
-    <p style="color: var(--color-text-muted); font-size: 0.875rem; margin-bottom: 2rem;">基於五大估值模型（P/E、PEG、DDM、P/B-ROE、DCF）交叉推算之合理價區間，並輔以巴菲特視角評語。</p>
+	<main class="page-wrapper">
+		<h1>價值投資分析</h1>
+		<p style="color: var(--color-text-muted); font-size: 0.875rem; margin-bottom: 2rem;">基於五大估值模型（P/E、PEG、DDM、P/B-ROE、DCF）交叉推算之合理價區間，並輔以巴菲特視角評語。</p>
 
-    <!-- 個股選擇標籤列 -->
-    <section class="section">
-      <div class="stock-tabs" style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
-        <a href="value/2303.html" class="tag stock-tab" id="tab-2303">2303 聯電</a>
-        <a href="value/2308.html" class="tag stock-tab" id="tab-2308">2308 台達電</a>
-        <a href="value/2317.html" class="tag stock-tab" id="tab-2317">2317 鴻海</a>
-        <a href="value/2344.html" class="tag stock-tab" id="tab-2344">2344 華邦電</a>
-        <a href="value/2345.html" class="tag stock-tab" id="tab-2345">2345 智邦</a>
-        <a href="value/2357.html" class="tag stock-tab" id="tab-2357">2357 華碩</a>
-        <a href="value/2383.html" class="tag stock-tab" id="tab-2383">2383 台光電</a>
-        <a href="value/2408.html" class="tag stock-tab" id="tab-2408">2408 南亞科</a>
-        <a href="value/2887.html" class="tag stock-tab" id="tab-2887">2887 台新新光金</a>
-        <a href="value/3017.html" class="tag stock-tab" id="tab-3017">3017 奇鋐</a>
-        <a href="value/3030.html" class="tag stock-tab" id="tab-3030">3030 德律</a>
-        <a href="value/3037.html" class="tag stock-tab" id="tab-3037">3037 欣興</a>
-        <a href="value/3324.html" class="tag stock-tab" id="tab-3324">3324 雙鴻</a>
-        <a href="value/3443.html" class="tag stock-tab" id="tab-3443">3443 創意</a>
-        <a href="value/3532.html" class="tag stock-tab" id="tab-3532">3532 台勝科</a>
-        <a href="value/3533.html" class="tag stock-tab" id="tab-3533">3533 嘉澤</a>
-        <a href="value/3665.html" class="tag stock-tab" id="tab-3665">3665 貿聯-KY</a>
-        <a href="value/4958.html" class="tag stock-tab" id="tab-4958">4958 臻鼎-KY</a>
-        <a href="value/5425.html" class="tag stock-tab" id="tab-5425">5425 台半</a>
-        <a href="value/6239.html" class="tag stock-tab" id="tab-6239">6239 力成</a>
-        <a href="value/6488.html" class="tag stock-tab" id="tab-6488">6488 環球晶</a>
-        <a href="value/6770.html" class="tag stock-tab" id="tab-6770">6770 力積電</a>
-      </div>
-    </section>
+		<!-- 個股選擇標籤列 -->
+		<section class="section">
+			<div class="stock-tabs" style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
+				<a href="value/2303.html" class="tag stock-tab" id="tab-2303">2303 聯電</a>
+				<a href="value/2308.html" class="tag stock-tab" id="tab-2308">2308 台達電</a>
+				<a href="value/2317.html" class="tag stock-tab" id="tab-2317">2317 鴻海</a>
+				<a href="value/2344.html" class="tag stock-tab" id="tab-2344">2344 華邦電</a>
+				<a href="value/2345.html" class="tag stock-tab" id="tab-2345">2345 智邦</a>
+				<a href="value/2357.html" class="tag stock-tab" id="tab-2357">2357 華碩</a>
+				<a href="value/2383.html" class="tag stock-tab" id="tab-2383">2383 台光電</a>
+				<a href="value/2408.html" class="tag stock-tab" id="tab-2408">2408 南亞科</a>
+				<a href="value/2887.html" class="tag stock-tab" id="tab-2887">2887 台新新光金</a>
+				<a href="value/3017.html" class="tag stock-tab" id="tab-3017">3017 奇鋐</a>
+				<a href="value/3030.html" class="tag stock-tab" id="tab-3030">3030 德律</a>
+				<a href="value/3037.html" class="tag stock-tab" id="tab-3037">3037 欣興</a>
+				<a href="value/3324.html" class="tag stock-tab" id="tab-3324">3324 雙鴻</a>
+				<a href="value/3443.html" class="tag stock-tab" id="tab-3443">3443 創意</a>
+				<a href="value/3532.html" class="tag stock-tab" id="tab-3532">3532 台勝科</a>
+				<a href="value/3533.html" class="tag stock-tab" id="tab-3533">3533 嘉澤</a>
+				<a href="value/3665.html" class="tag stock-tab" id="tab-3665">3665 貿聯-KY</a>
+				<a href="value/4958.html" class="tag stock-tab" id="tab-4958">4958 臻鼎-KY</a>
+				<a href="value/5425.html" class="tag stock-tab" id="tab-5425">5425 台半</a>
+				<a href="value/6239.html" class="tag stock-tab" id="tab-6239">6239 力成</a>
+				<a href="value/6488.html" class="tag stock-tab" id="tab-6488">6488 環球晶</a>
+				<a href="value/6770.html" class="tag stock-tab" id="tab-6770">6770 力積電</a>
+			</div>
+		</section>
 
-  </main>
+	</main>
 
-  <button class="go-top-btn" id="goTopBtn" aria-label="回到頁首">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M18 15l-6-6-6 6" />
-    </svg>
-  </button>
+	<button class="go-top-btn" id="goTopBtn" aria-label="回到頁首">
+		<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+			<path d="M18 15l-6-6-6 6" />
+		</svg>
+	</button>
 
-  <footer class="site-footer">
-    STARCK Research &mdash; 僅供個人參考使用
-  </footer>
+	<footer class="site-footer">
+		STARCK Research &mdash; 僅供個人參考使用
+	</footer>
 
-  <script src="js/main.js"></script>
+	<script src="js/main.js"></script>
 </body>
 
 </html>

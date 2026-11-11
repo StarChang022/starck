@@ -1,372 +1,525 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>今日市場情報 — STARCK Research</title>
-  <meta name="description" content="今日市場情報：關鍵指數表現、台股資金流向、重大市場消息、市場情緒指標與聰明錢潛伏區。">
-  <link rel="icon" type="image/png" href="images/favicon.png">
-  <link rel="stylesheet" href="css/style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>今日市場情報 — STARCK Research</title>
+	<meta name="description" content="今日市場情報：關鍵指數表現、台股資金流向、重大市場消息、市場情緒指標與聰明錢潛伏區。">
+	<link rel="icon" type="image/png" href="images/favicon.png">
+	<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<header class="site-header">
-  <div class="header-inner">
-    <a href="index.html" class="logo-link">
-      <img src="images/logo.png" alt="STARCK Research">
-    </a>
-    <nav>
-      <ul class="nav-menu">
-        <li><a href="intelligence.html" class="active">今日市場情報</a></li>
-        <li><a href="jiahong.html">Zhu-Jiahong</a></li>
-        <li><a href="swing.html">Mark-Minervini</a></li>
-        <li><a href="kelly.html">John-Larry-Kelly</a></li>
-        <li><a href="value.html">價值投資分析</a></li>
-      </ul>
-    </nav>
-    <button class="hamburger" id="hamburger" aria-label="開啟選單">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
+	<header class="site-header">
+		<div class="header-inner">
+			<a href="index.html" class="logo-link">
+				<img src="images/logo.png" alt="STARCK Research">
+			</a>
+			<nav>
+				<ul class="nav-menu" id="navMenu">
+					<li><a href="intelligence.html">今日市場情報</a></li>
+					<li><a href="jiahong.html">Jiahong</a></li>
+					<li><a href="swing.html">Minervini</a></li>
+					<li><a href="kelly.html">Kelly</a></li>
+					<li><a href="value.html">價值投資分析</a></li>
+				</ul>
+			</nav>
+			<button class="hamburger" id="hamburger" aria-label="開啟選單">
+				<span></span><span></span><span></span>
+			</button>
+		</div>
+	</header>
 
-<nav class="nav-overlay" id="navOverlay">
-  <a href="intelligence.html" class="active">今日市場情報</a>
-  <a href="jiahong.html">Zhu-Jiahong</a>
-  <a href="swing.html">Mark-Minervini</a>
-  <a href="kelly.html">John-Larry-Kelly</a>
-  <a href="value.html">價值投資分析</a>
-</nav>
+	<nav class="nav-overlay" id="navOverlay" aria-label="行動選單">
+		<a href="intelligence.html">今日市場情報</a>
+		<a href="jiahong.html">Jiahong</a>
+		<a href="swing.html">Minervini</a>
+		<a href="kelly.html">Kelly</a>
+		<a href="value.html">價值投資分析</a>
+	</nav>
 
-<main class="page-wrapper">
-  <h1>今日市場情報</h1>
-  <span class="report-date">報告撰寫日期：2026 年 11 月 10 日</span>
+	<main class="page-wrapper">
+		<h1>今日市場情報</h1>
+		<span class="report-date">報告撰寫日期：2026 年 11 月 10 日</span>
 
-  <!-- 關鍵指數 -->
-  <section class="section">
-    <h2 class="section-title">關鍵指數表現</h2>
-    <div class="table-scroll">
-      <table class="data-table">
-        <thead>
-          <tr>
-            <th>指數</th>
-            <th class="num">收盤</th>
-            <th class="num">漲跌</th>
-            <th class="num">漲跌幅</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="stock">加權指數 TWSE</td><td class="num">42,711.92</td><td class="num pos">+1,050.22</td><td class="num pos">+2.52%</td></tr>
-          <tr><td class="stock">台積電 TSM ADR</td><td class="num">384.50</td><td class="num pos">+8.45</td><td class="num pos">+2.25%</td></tr>
-          <tr><td class="stock">費城半導體 SOX</td><td class="num">9,745.44</td><td class="num pos">+211.65</td><td class="num pos">+2.22%</td></tr>
-          <tr><td class="stock">道瓊指數 Dow Jones</td><td class="num">52,560.10</td><td class="num pos">+261.95</td><td class="num pos">+0.50%</td></tr>
-          <tr><td class="stock">那斯達克 Nasdaq Composite</td><td class="num">25,666.90</td><td class="num pos">+379.30</td><td class="num pos">+1.50%</td></tr>
-          <tr><td class="stock">標普500 S&P 500</td><td class="num">7,612.95</td><td class="num pos">+75.38</td><td class="num pos">+1.00%</td></tr>
-          <tr><td class="stock">南韓綜合指數</td><td class="num">5,418.92</td><td class="num pos">+106.25</td><td class="num pos">+2.00%</td></tr>
-          <tr><td class="stock">日經 225 指數</td><td class="num">60,923.26</td><td class="num pos">+1,077.23</td><td class="num pos">+1.80%</td></tr>
-          <tr><td class="stock">恒生指數</td><td class="num">25,196.49</td><td class="num pos">+249.47</td><td class="num pos">+1.00%</td></tr>
-          <tr><td class="stock">上證指數</td><td class="num">3,718.83</td><td class="num pos">+29.51</td><td class="num pos">+0.80%</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
+		<!-- 關鍵指數 -->
+		<section class="section">
+			<h2 class="section-title">關鍵指數表現</h2>
+			<div class="table-scroll">
+				<table class="data-table">
+					<thead>
+						<tr>
+							<th>指數</th>
+							<th class="num">收盤</th>
+							<th class="num">漲跌</th>
+							<th class="num">漲跌幅</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="stock">加權指數 TWSE</td>
+							<td class="num">42,711.92</td>
+							<td class="num pos">+1,050.22</td>
+							<td class="num pos">+2.52%</td>
+						</tr>
+						<tr>
+							<td class="stock">台積電 TSM ADR</td>
+							<td class="num">384.50</td>
+							<td class="num pos">+8.45</td>
+							<td class="num pos">+2.25%</td>
+						</tr>
+						<tr>
+							<td class="stock">費城半導體 SOX</td>
+							<td class="num">9,745.44</td>
+							<td class="num pos">+211.65</td>
+							<td class="num pos">+2.22%</td>
+						</tr>
+						<tr>
+							<td class="stock">道瓊指數 Dow Jones</td>
+							<td class="num">52,560.10</td>
+							<td class="num pos">+261.95</td>
+							<td class="num pos">+0.50%</td>
+						</tr>
+						<tr>
+							<td class="stock">那斯達克 Nasdaq Composite</td>
+							<td class="num">25,666.90</td>
+							<td class="num pos">+379.30</td>
+							<td class="num pos">+1.50%</td>
+						</tr>
+						<tr>
+							<td class="stock">標普500 S&P 500</td>
+							<td class="num">7,612.95</td>
+							<td class="num pos">+75.38</td>
+							<td class="num pos">+1.00%</td>
+						</tr>
+						<tr>
+							<td class="stock">南韓綜合指數</td>
+							<td class="num">5,418.92</td>
+							<td class="num pos">+106.25</td>
+							<td class="num pos">+2.00%</td>
+						</tr>
+						<tr>
+							<td class="stock">日經 225 指數</td>
+							<td class="num">60,923.26</td>
+							<td class="num pos">+1,077.23</td>
+							<td class="num pos">+1.80%</td>
+						</tr>
+						<tr>
+							<td class="stock">恒生指數</td>
+							<td class="num">25,196.49</td>
+							<td class="num pos">+249.47</td>
+							<td class="num pos">+1.00%</td>
+						</tr>
+						<tr>
+							<td class="stock">上證指數</td>
+							<td class="num">3,718.83</td>
+							<td class="num pos">+29.51</td>
+							<td class="num pos">+0.80%</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
 
-  <!-- 新台幣兌美元匯率 -->
-  <section class="section">
-    <h2 class="section-title">新台幣兌美元匯率</h2>
-    <div class="table-scroll">
-      <table class="data-table">
-        <thead>
-          <tr>
-            <th>日期</th>
-            <th class="num">收盤價</th>
-            <th class="num">單日升貶</th>
-            <th class="num">累積變動</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>11/10</td><td class="num">32.785</td><td class="num pos">升 6.5 分</td><td class="num pos">+0.20%</td></tr>
-          <tr><td>11/09</td><td class="num">32.850</td><td class="num pos">升 1.48 角</td><td class="num pos">+0.45%</td></tr>
-          <tr><td>11/06</td><td class="num">32.998</td><td class="num pos">升 1.02 角</td><td class="num pos">+0.31%</td></tr>
-          <tr><td>11/05</td><td class="num">33.100</td><td class="num neg">貶 8.0 分</td><td class="num neg">-0.24%</td></tr>
-          <tr><td>11/04</td><td class="num">33.020</td><td class="num neg">貶 7.0 分</td><td class="num neg">-0.21%</td></tr>
-          <tr><td>11/03</td><td class="num">32.950</td><td class="num neg">貶 3.5 分</td><td class="num neg">-0.11%</td></tr>
-          <tr><td>11/02</td><td class="num">32.915</td><td class="num neg">貶 5.5 分</td><td class="num neg">-0.17%</td></tr>
-          <tr><td>10/30</td><td class="num">32.860</td><td class="num neg">貶 4.0 分</td><td class="num neg">-0.12%</td></tr>
-          <tr><td>10/29</td><td class="num">32.820</td><td class="num pos">升 2.5 分</td><td class="num pos">+0.08%</td></tr>
-          <tr><td>10/28</td><td class="num">32.845</td><td class="num neg">貶 6.5 分</td><td class="num neg">-0.20%</td></tr>
-          <tr><td>10/27</td><td class="num">32.780</td><td class="num neg">貶 3.0 分</td><td class="num neg">-0.09%</td></tr>
-          <tr><td>10/26</td><td class="num">32.750</td><td class="num pos">升 4.0 分</td><td class="num pos">+0.12%</td></tr>
-          <tr><td>10/23</td><td class="num">32.790</td><td class="num neg">貶 5.0 分</td><td class="num neg">-0.15%</td></tr>
-          <tr><td>10/22</td><td class="num">32.740</td><td class="num pos">升 3.5 分</td><td class="num pos">+0.11%</td></tr>
-          <tr><td>10/21</td><td class="num">32.775</td><td class="num neg">貶 4.5 分</td><td class="num neg">-0.14%</td></tr>
-          <tr><td>10/20</td><td class="num">32.730</td><td class="num neg">貶 6.0 分</td><td class="num neg">-0.18%</td></tr>
-          <tr><td>10/19</td><td class="num">32.670</td><td class="num pos">升 5.0 分</td><td class="num pos">+0.15%</td></tr>
-          <tr><td>10/16</td><td class="num">32.720</td><td class="num neg">貶 3.0 分</td><td class="num neg">-0.09%</td></tr>
-          <tr><td>10/15</td><td class="num">32.690</td><td class="num pos">升 4.5 分</td><td class="num pos">+0.14%</td></tr>
-          <tr><td>10/14</td><td class="num">32.735</td><td class="num neg">貶 5.5 分</td><td class="num neg">-0.17%</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
+		<!-- 新台幣兌美元匯率 -->
+		<section class="section">
+			<h2 class="section-title">新台幣兌美元匯率</h2>
+			<div class="table-scroll">
+				<table class="data-table">
+					<thead>
+						<tr>
+							<th>日期</th>
+							<th class="num">收盤價</th>
+							<th class="num">單日升貶</th>
+							<th class="num">累積變動</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>11/10</td>
+							<td class="num">32.785</td>
+							<td class="num pos">升 6.5 分</td>
+							<td class="num pos">+0.20%</td>
+						</tr>
+						<tr>
+							<td>11/09</td>
+							<td class="num">32.850</td>
+							<td class="num pos">升 1.48 角</td>
+							<td class="num pos">+0.45%</td>
+						</tr>
+						<tr>
+							<td>11/06</td>
+							<td class="num">32.998</td>
+							<td class="num pos">升 1.02 角</td>
+							<td class="num pos">+0.31%</td>
+						</tr>
+						<tr>
+							<td>11/05</td>
+							<td class="num">33.100</td>
+							<td class="num neg">貶 8.0 分</td>
+							<td class="num neg">-0.24%</td>
+						</tr>
+						<tr>
+							<td>11/04</td>
+							<td class="num">33.020</td>
+							<td class="num neg">貶 7.0 分</td>
+							<td class="num neg">-0.21%</td>
+						</tr>
+						<tr>
+							<td>11/03</td>
+							<td class="num">32.950</td>
+							<td class="num neg">貶 3.5 分</td>
+							<td class="num neg">-0.11%</td>
+						</tr>
+						<tr>
+							<td>11/02</td>
+							<td class="num">32.915</td>
+							<td class="num neg">貶 5.5 分</td>
+							<td class="num neg">-0.17%</td>
+						</tr>
+						<tr>
+							<td>10/30</td>
+							<td class="num">32.860</td>
+							<td class="num neg">貶 4.0 分</td>
+							<td class="num neg">-0.12%</td>
+						</tr>
+						<tr>
+							<td>10/29</td>
+							<td class="num">32.820</td>
+							<td class="num pos">升 2.5 分</td>
+							<td class="num pos">+0.08%</td>
+						</tr>
+						<tr>
+							<td>10/28</td>
+							<td class="num">32.845</td>
+							<td class="num neg">貶 6.5 分</td>
+							<td class="num neg">-0.20%</td>
+						</tr>
+						<tr>
+							<td>10/27</td>
+							<td class="num">32.780</td>
+							<td class="num neg">貶 3.0 分</td>
+							<td class="num neg">-0.09%</td>
+						</tr>
+						<tr>
+							<td>10/26</td>
+							<td class="num">32.750</td>
+							<td class="num pos">升 4.0 分</td>
+							<td class="num pos">+0.12%</td>
+						</tr>
+						<tr>
+							<td>10/23</td>
+							<td class="num">32.790</td>
+							<td class="num neg">貶 5.0 分</td>
+							<td class="num neg">-0.15%</td>
+						</tr>
+						<tr>
+							<td>10/22</td>
+							<td class="num">32.740</td>
+							<td class="num pos">升 3.5 分</td>
+							<td class="num pos">+0.11%</td>
+						</tr>
+						<tr>
+							<td>10/21</td>
+							<td class="num">32.775</td>
+							<td class="num neg">貶 4.5 分</td>
+							<td class="num neg">-0.14%</td>
+						</tr>
+						<tr>
+							<td>10/20</td>
+							<td class="num">32.730</td>
+							<td class="num neg">貶 6.0 分</td>
+							<td class="num neg">-0.18%</td>
+						</tr>
+						<tr>
+							<td>10/19</td>
+							<td class="num">32.670</td>
+							<td class="num pos">升 5.0 分</td>
+							<td class="num pos">+0.15%</td>
+						</tr>
+						<tr>
+							<td>10/16</td>
+							<td class="num">32.720</td>
+							<td class="num neg">貶 3.0 分</td>
+							<td class="num neg">-0.09%</td>
+						</tr>
+						<tr>
+							<td>10/15</td>
+							<td class="num">32.690</td>
+							<td class="num pos">升 4.5 分</td>
+							<td class="num pos">+0.14%</td>
+						</tr>
+						<tr>
+							<td>10/14</td>
+							<td class="num">32.735</td>
+							<td class="num neg">貶 5.5 分</td>
+							<td class="num neg">-0.17%</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
 
-  <!-- 資金流向與主流族群 -->
-  <section class="section">
-    <h2 class="section-title">台股資金流向與主流族群</h2>
-    <div class="card">
-      <div class="card-title">AI 伺服器水冷散熱與高階組裝族群（主流領攻核心）</div>
-      <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">美股科技股續揚帶動台股連兩日反彈，今日加權指數續漲 1,050.22 點 (+2.52%) 收在 42,711.92 點。資金高度集中於 AI 伺服器關鍵零組件，散熱龍頭雙鴻 (3324) 大漲 +7.39% 攻上 1,235 元、奇鋐 (3017) 勁揚，高階伺服器連接器嘉澤 (3533) 與銅箔基板台光電 (2383) 亦同步展現多頭反彈動能。惟集中市場量能為 10,323 億元，逼近 10MA 反壓，盤面呈現技術面抽腳後的籌碼分歧。</p>
-      <div style="font-size: 0.85rem; color: var(--color-text-muted);">代表個股：雙鴻 (3324)、奇鋐 (3017)、台光電 (2383)、嘉澤 (3533)</div>
-    </div>
-    <div class="card">
-      <div class="card-title">ASIC 矽智財與高階先進封裝族群（法說利多與比價效應）</div>
-      <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">台積電先進製程擴產推動矽智財族群強勢表態，創意 (3443) 9 月營收年增近倍且 Q3 獲利出色，今日帶量大漲 +6.94% 收在 7,170 元強勢收復 60MA 季線，帶動世芯-KY (3661) 與力旺 (3529) 齊步反彈走揚。但封測龍頭力成 (6239) 盤中逼近 240 元反遭外資調節留長上影線，族群內部呈現個股基本面分化。</p>
-      <div style="font-size: 0.85rem; color: var(--color-text-muted);">代表個股：創意 (3443)、世芯-KY (3661)、力旺 (3529)、力成 (6239)</div>
-    </div>
-    <div class="card">
-      <div class="card-title">本土投信「連 21 買」力抗外資提款（內資國家隊護盤陣線）</div>
-      <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">外資現貨連續第 9 個交易日賣超（今日續賣 341.17 億元，累計連 9 賣逾 8,297 億元），但本土投信展現堅強意志，單日大買 368.29 億元，締造連 21 買新紀錄。惟值得警惕的是，投信今日由連日買超金融轉為調節台新新光金 (2887) 2,315 張，資金出現由傳產金融轉向跌深 AI 科技權值的結構性輪動。</p>
-      <div style="font-size: 0.85rem; color: var(--color-text-muted);">代表個股：創意 (3443)、雙鴻 (3324)、嘉澤 (3533)、台新新光金 (2887)</div>
-    </div>
-  </section>
+		<!-- 資金流向與主流族群 -->
+		<section class="section">
+			<h2 class="section-title">台股資金流向與主流族群</h2>
+			<div class="card">
+				<div class="card-title">AI 伺服器水冷散熱與高階組裝族群（主流領攻核心）</div>
+				<p style="font-size: 0.9rem; margin-bottom: 0.5rem;">美股科技股續揚帶動台股連兩日反彈，今日加權指數續漲 1,050.22 點 (+2.52%) 收在 42,711.92 點。資金高度集中於 AI 伺服器關鍵零組件，散熱龍頭雙鴻 (3324) 大漲 +7.39% 攻上 1,235 元、奇鋐 (3017) 勁揚，高階伺服器連接器嘉澤 (3533) 與銅箔基板台光電 (2383) 亦同步展現多頭反彈動能。惟集中市場量能為 10,323 億元，逼近 10MA 反壓，盤面呈現技術面抽腳後的籌碼分歧。</p>
+				<div style="font-size: 0.85rem; color: var(--color-text-muted);">代表個股：雙鴻 (3324)、奇鋐 (3017)、台光電 (2383)、嘉澤 (3533)</div>
+			</div>
+			<div class="card">
+				<div class="card-title">ASIC 矽智財與高階先進封裝族群（法說利多與比價效應）</div>
+				<p style="font-size: 0.9rem; margin-bottom: 0.5rem;">台積電先進製程擴產推動矽智財族群強勢表態，創意 (3443) 9 月營收年增近倍且 Q3 獲利出色，今日帶量大漲 +6.94% 收在 7,170 元強勢收復 60MA 季線，帶動世芯-KY (3661) 與力旺 (3529) 齊步反彈走揚。但封測龍頭力成 (6239) 盤中逼近 240 元反遭外資調節留長上影線，族群內部呈現個股基本面分化。</p>
+				<div style="font-size: 0.85rem; color: var(--color-text-muted);">代表個股：創意 (3443)、世芯-KY (3661)、力旺 (3529)、力成 (6239)</div>
+			</div>
+			<div class="card">
+				<div class="card-title">本土投信「連 21 買」力抗外資提款（內資國家隊護盤陣線）</div>
+				<p style="font-size: 0.9rem; margin-bottom: 0.5rem;">外資現貨連續第 9 個交易日賣超（今日續賣 341.17 億元，累計連 9 賣逾 8,297 億元），但本土投信展現堅強意志，單日大買 368.29 億元，締造連 21 買新紀錄。惟值得警惕的是，投信今日由連日買超金融轉為調節台新新光金 (2887) 2,315 張，資金出現由傳產金融轉向跌深 AI 科技權值的結構性輪動。</p>
+				<div style="font-size: 0.85rem; color: var(--color-text-muted);">代表個股：創意 (3443)、雙鴻 (3324)、嘉澤 (3533)、台新新光金 (2887)</div>
+			</div>
+		</section>
 
-  <!-- 重大市場消息 -->
-  <section class="section">
-    <h2 class="section-title">重大市場消息</h2>
-    <div class="sub-block">
-      <div class="sub-block-title" style="color: var(--color-pos);">利多消息</div>
-      <ul style="font-size: 0.875rem; line-height: 1.8; padding-left: 1.25rem;">
-        <li><strong>加權指數連兩日大漲逾 3,010 點，收復 5MA 攻擊線</strong>：加權指數今日續漲 1,050.22 點 (+2.52%) 收在 42,711.92 點，成交量放大至 10,323 億元，成功收復 5MA (41,719.78 點)，化解短線連續崩跌危機。</li>
-        <li><strong>投信連 21 買單日大敲 368 億元，改寫史上連買天數新頁</strong>：本土投信法人力抗外資調節，單日買超高達 368.29 億元，連續 21 個交易日累計買超突破 3,100 億元，重點回補具備實質業績之 AI 供應鏈與權值指標。</li>
-        <li><strong>創意 9 月營收年增 97.8% 創高，強勢帶量收復季線</strong>：矽智財大廠創意公布 9 月合併營收達 36.19 億元（年增 97.76%、月增 22.95%），受惠國際大客戶 AI ASIC 晶片認列高峰，外資與投信法人聯手買超，股價大漲 +6.94% 收 7,170 元。</li>
-        <li><strong>美股費半大漲 2.22%、VIX 回落至 19.85 點警戒線下</strong>：費城半導體指數強彈至 9,745.44 點，台積電 ADR 漲 +2.25% 報 384.50 美元；美股 VIX 恐慌指數自 22.45 回跌至 19.85 點，短線極端恐慌情緒顯著降溫。</li>
-        <li><strong>台幣匯率升值 6.5 分收在 32.785 元，資金外流速度趨緩</strong>：台北匯市新台幣兌美元匯率連兩日升值，終場收在 32.785 元，外資期貨空單亦小幅回補 4,210 口，熱錢撤出壓力略見舒緩。</li>
-      </ul>
-    </div>
-    <div class="sub-block" style="margin-top: 1.5rem;">
-      <div class="sub-block-title" style="color: var(--color-neg);">利空消息</div>
-      <ul style="font-size: 0.875rem; line-height: 1.8; padding-left: 1.25rem;">
-        <li><strong>外資現貨連 9 賣累計逾 8,297 億元，土洋對作加劇</strong>：外資今日再度賣超 -341.17 億元，自 10 月底以來連續 9 個交易日提款逾 8,297 億元，國際長線基金去槓桿調整持續壓抑大盤反彈空間。</li>
-        <li><strong>台指期外資淨空單仍高達 90,520 口，未脫離高壓戒備區</strong>：外資未平倉淨空單今日雖小幅回補 4,210 口，但未平倉總數仍高達 90,520 口，持續處於 9 萬口以上極端避險水位，空頭對沖並未實質解除。</li>
-        <li><strong>各級均線呈空頭反壓，10MA 與 20MA 蓋頭逼近</strong>：指數收盤 42,711 點上方即將面臨下彎的 10MA (43,544 點) 與 20MA 生命線 (45,396 點) 沉重套牢賣壓，盤面追價意願謹慎，反彈隨時面臨解套賣壓打回。</li>
-        <li><strong>昨日漲停指標今日全數爆量開高走低，隔日沖出貨痕跡重</strong>：昨日漲停之力積電 (6770) 今日爆 13.4 萬張天量留長上影線收黑，力成 (6239) 與誠美材 (4960) 亦爆量留長上影線，外資單日大砍力積電 8,352 張，顯示反彈主要源於短線隔日沖大戶操作。</li>
-        <li><strong>投信護盤買盤鬆動，台新新光金由連買轉為大賣 2,315 張</strong>：投信終止連 20 買金融權值股動作，今日反手大砍台新新光金 2,315 張，股價下跌 -1.25% 收 39.45 元，跌破短中均線支撐。</li>
-      </ul>
-    </div>
-  </section>
+		<!-- 重大市場消息 -->
+		<section class="section">
+			<h2 class="section-title">重大市場消息</h2>
+			<div class="sub-block">
+				<div class="sub-block-title" style="color: var(--color-pos);">利多消息</div>
+				<ul style="font-size: 0.875rem; line-height: 1.8; padding-left: 1.25rem;">
+					<li><strong>加權指數連兩日大漲逾 3,010 點，收復 5MA 攻擊線</strong>：加權指數今日續漲 1,050.22 點 (+2.52%) 收在 42,711.92 點，成交量放大至 10,323 億元，成功收復 5MA (41,719.78 點)，化解短線連續崩跌危機。</li>
+					<li><strong>投信連 21 買單日大敲 368 億元，改寫史上連買天數新頁</strong>：本土投信法人力抗外資調節，單日買超高達 368.29 億元，連續 21 個交易日累計買超突破 3,100 億元，重點回補具備實質業績之 AI 供應鏈與權值指標。</li>
+					<li><strong>創意 9 月營收年增 97.8% 創高，強勢帶量收復季線</strong>：矽智財大廠創意公布 9 月合併營收達 36.19 億元（年增 97.76%、月增 22.95%），受惠國際大客戶 AI ASIC 晶片認列高峰，外資與投信法人聯手買超，股價大漲 +6.94% 收 7,170 元。</li>
+					<li><strong>美股費半大漲 2.22%、VIX 回落至 19.85 點警戒線下</strong>：費城半導體指數強彈至 9,745.44 點，台積電 ADR 漲 +2.25% 報 384.50 美元；美股 VIX 恐慌指數自 22.45 回跌至 19.85 點，短線極端恐慌情緒顯著降溫。</li>
+					<li><strong>台幣匯率升值 6.5 分收在 32.785 元，資金外流速度趨緩</strong>：台北匯市新台幣兌美元匯率連兩日升值，終場收在 32.785 元，外資期貨空單亦小幅回補 4,210 口，熱錢撤出壓力略見舒緩。</li>
+				</ul>
+			</div>
+			<div class="sub-block" style="margin-top: 1.5rem;">
+				<div class="sub-block-title" style="color: var(--color-neg);">利空消息</div>
+				<ul style="font-size: 0.875rem; line-height: 1.8; padding-left: 1.25rem;">
+					<li><strong>外資現貨連 9 賣累計逾 8,297 億元，土洋對作加劇</strong>：外資今日再度賣超 -341.17 億元，自 10 月底以來連續 9 個交易日提款逾 8,297 億元，國際長線基金去槓桿調整持續壓抑大盤反彈空間。</li>
+					<li><strong>台指期外資淨空單仍高達 90,520 口，未脫離高壓戒備區</strong>：外資未平倉淨空單今日雖小幅回補 4,210 口，但未平倉總數仍高達 90,520 口，持續處於 9 萬口以上極端避險水位，空頭對沖並未實質解除。</li>
+					<li><strong>各級均線呈空頭反壓，10MA 與 20MA 蓋頭逼近</strong>：指數收盤 42,711 點上方即將面臨下彎的 10MA (43,544 點) 與 20MA 生命線 (45,396 點) 沉重套牢賣壓，盤面追價意願謹慎，反彈隨時面臨解套賣壓打回。</li>
+					<li><strong>昨日漲停指標今日全數爆量開高走低，隔日沖出貨痕跡重</strong>：昨日漲停之力積電 (6770) 今日爆 13.4 萬張天量留長上影線收黑，力成 (6239) 與誠美材 (4960) 亦爆量留長上影線，外資單日大砍力積電 8,352 張，顯示反彈主要源於短線隔日沖大戶操作。</li>
+					<li><strong>投信護盤買盤鬆動，台新新光金由連買轉為大賣 2,315 張</strong>：投信終止連 20 買金融權值股動作，今日反手大砍台新新光金 2,315 張，股價下跌 -1.25% 收 39.45 元，跌破短中均線支撐。</li>
+				</ul>
+			</div>
+		</section>
 
-  <!-- 市場情緒指標 -->
-  <section class="section">
-    <h2 class="section-title">市場情緒指標</h2>
-    <div class="table-scroll">
-      <table class="data-table">
-        <thead>
-          <tr>
-            <th>指標項目</th>
-            <th class="num">最新數值</th>
-            <th>狀態與解讀</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>台指期外資淨空單</td>
-            <td class="num neg">90,520 口</td>
-            <td>外資未平倉淨空單由 94,730 口小幅回補 <strong>4,210 口</strong> 至 <strong>90,520 口</strong>（雖避險空單自高檔回補，但仍處於 9 萬口以上極度嚴峻之高壓鎖單水位）。</td>
-          </tr>
-          <tr>
-            <td>美股 VIX 恐慌指數</td>
-            <td class="num pos">19.85 點</td>
-            <td>收在 <strong>19.85 點</strong>（自前日 22.45 點回跌 <strong>-11.58%</strong>，跌破 20 點多空警戒臨界線，極端恐慌情緒顯著降溫）。</td>
-          </tr>
-          <tr>
-            <td>CNN 恐懼與貪婪指數</td>
-            <td class="num neg">34.20</td>
-            <td>讀數由 28.60 回升至 <strong>34.20</strong>，脫離極度恐慌，目前處於「<strong>恐懼 (Fear)</strong>」區間，反映市場氣氛仍偏向審慎防禦。</td>
-          </tr>
-          <tr>
-            <td>美國 10 年期公債殖利率</td>
-            <td class="num">4.78%</td>
-            <td>報 <strong>4.78%</strong>（微幅下滑 3 個基點，債市靜待本週即將公布之美國 10 月 CPI 通膨數據）。</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
+		<!-- 市場情緒指標 -->
+		<section class="section">
+			<h2 class="section-title">市場情緒指標</h2>
+			<div class="table-scroll">
+				<table class="data-table">
+					<thead>
+						<tr>
+							<th>指標項目</th>
+							<th class="num">最新數值</th>
+							<th>狀態與解讀</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>台指期外資淨空單</td>
+							<td class="num neg">90,520 口</td>
+							<td>外資未平倉淨空單由 94,730 口小幅回補 <strong>4,210 口</strong> 至 <strong>90,520 口</strong>（雖避險空單自高檔回補，但仍處於 9 萬口以上極度嚴峻之高壓鎖單水位）。</td>
+						</tr>
+						<tr>
+							<td>美股 VIX 恐慌指數</td>
+							<td class="num pos">19.85 點</td>
+							<td>收在 <strong>19.85 點</strong>（自前日 22.45 點回跌 <strong>-11.58%</strong>，跌破 20 點多空警戒臨界線，極端恐慌情緒顯著降溫）。</td>
+						</tr>
+						<tr>
+							<td>CNN 恐懼與貪婪指數</td>
+							<td class="num neg">34.20</td>
+							<td>讀數由 28.60 回升至 <strong>34.20</strong>，脫離極度恐慌，目前處於「<strong>恐懼 (Fear)</strong>」區間，反映市場氣氛仍偏向審慎防禦。</td>
+						</tr>
+						<tr>
+							<td>美國 10 年期公債殖利率</td>
+							<td class="num">4.78%</td>
+							<td>報 <strong>4.78%</strong>（微幅下滑 3 個基點，債市靜待本週即將公布之美國 10 月 CPI 通膨數據）。</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
 
-  <!-- 聰明錢潛伏區 -->
-  <section class="section">
-    <h2 class="section-title">聰明錢潛伏區</h2>
-    <div class="card">
-      <div class="card-title">投信連 21 買擴大認養「AI 散熱水冷雙雄雙鴻 (3324) 與奇鋐 (3017)」</div>
-      <p style="font-size: 0.9rem;">投信今日大舉買超雙鴻 397 張，自營商同步買超，推升雙鴻跳空大漲 +7.39% 收在 1,235 元。聰明錢看好 GB200/NVL72 液冷散熱進入密集量產出貨期，逢低搶進籌碼。</p>
-    </div>
-    <div class="card">
-      <div class="card-title">法人聯手大單掃貨「ASIC 龍頭創意 (3443)」帶動高階矽智財翻多</div>
-      <p style="font-size: 0.9rem;">創意今日獲外資買超 263 張、投信買超 245 張，三大法人同步買超。聰明錢在此布局 9 月營收近翻倍的純 IP 與委託設計 (NRE) 成長動能，股價一舉跨越季線。</p>
-    </div>
-    <div class="card">
-      <div class="card-title">投信轉向調節金融權值「台新新光金 (2887)」，換股操作轉向電子主流</div>
-      <p style="font-size: 0.9rem;">投信連 20 買後今日首度轉賣 2,315 張，聰明錢資金呈現從防禦型金融股撤出、轉向高彈性電子股的跡象。</p>
-    </div>
-    <div class="card">
-      <div class="card-title">外資趁指數千點大漲「逢高持續調節現貨提款 341 億元」</div>
-      <p style="font-size: 0.9rem;">外資在指數大漲逾千點時仍大賣 341.17 億元，且在力積電、力成等短線強彈股高檔大舉倒貨，顯示外資主力操作策略仍以反彈提款防禦為主。</p>
-    </div>
-  </section>
+		<!-- 聰明錢潛伏區 -->
+		<section class="section">
+			<h2 class="section-title">聰明錢潛伏區</h2>
+			<div class="card">
+				<div class="card-title">投信連 21 買擴大認養「AI 散熱水冷雙雄雙鴻 (3324) 與奇鋐 (3017)」</div>
+				<p style="font-size: 0.9rem;">投信今日大舉買超雙鴻 397 張，自營商同步買超，推升雙鴻跳空大漲 +7.39% 收在 1,235 元。聰明錢看好 GB200/NVL72 液冷散熱進入密集量產出貨期，逢低搶進籌碼。</p>
+			</div>
+			<div class="card">
+				<div class="card-title">法人聯手大單掃貨「ASIC 龍頭創意 (3443)」帶動高階矽智財翻多</div>
+				<p style="font-size: 0.9rem;">創意今日獲外資買超 263 張、投信買超 245 張，三大法人同步買超。聰明錢在此布局 9 月營收近翻倍的純 IP 與委託設計 (NRE) 成長動能，股價一舉跨越季線。</p>
+			</div>
+			<div class="card">
+				<div class="card-title">投信轉向調節金融權值「台新新光金 (2887)」，換股操作轉向電子主流</div>
+				<p style="font-size: 0.9rem;">投信連 20 買後今日首度轉賣 2,315 張，聰明錢資金呈現從防禦型金融股撤出、轉向高彈性電子股的跡象。</p>
+			</div>
+			<div class="card">
+				<div class="card-title">外資趁指數千點大漲「逢高持續調節現貨提款 341 億元」</div>
+				<p style="font-size: 0.9rem;">外資在指數大漲逾千點時仍大賣 341.17 億元，且在力積電、力成等短線強彈股高檔大舉倒貨，顯示外資主力操作策略仍以反彈提款防禦為主。</p>
+			</div>
+		</section>
 
-  <!-- 持股情報 -->
-  <section class="section">
-    <h2 class="section-title">持股情報</h2>
-    <div class="card">
-      <div class="card-title">2383 台光電</div>
-      <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">銅箔基板龍頭跳空強彈 +7.25% 站上 5MA，外資小幅調節但投信力挺。11 月 10 日收在 4,365.00 元（+295.00 元, +7.25%），開盤 4,370.00 元、最高 4,475.00 元、最低 4,160.00 元，成交量 5,988 張。外資賣超 442 張，但投信買超 147 張。受惠美系雲端巨頭高階交換機與 AI 伺服器載板需求強勁，股價放量長紅站回 5MA (4,182 元)，短線脫離成本區翻正獲利。</p>
-      <div class="kv-row" style="margin-top: 0.75rem;">
-        <div class="kv-item"><span class="kv-label">成本</span><span class="kv-value">4,298.60</span></div>
-        <div class="kv-item"><span class="kv-label">股數</span><span class="kv-value">5</span></div>
-        <div class="kv-item"><span class="kv-label">股價</span><span class="kv-value">4,365.00</span></div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-title">2887 台新新光金</div>
-      <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">投信由連 20 買轉手大砍 2,315 張，股價跌破短均線收 39.45 元。11 月 10 日收在 39.45 元（-0.50 元, -1.25%），開盤 40.00 元、最高 40.55 元、最低 39.15 元，成交量 70,140 張。投信反手賣超 2,315 張、外資買超 7,542 張、自營商買超 760 張。受內資籌碼調節影響，股價跌破 5MA (39.64 元) 與 10MA (40.78 元)，帳面淨虧損擴大至 -8.53%，擊穿停損門檻。</p>
-      <div class="kv-row" style="margin-top: 0.75rem;">
-        <div class="kv-item"><span class="kv-label">成本</span><span class="kv-value">42.20</span></div>
-        <div class="kv-item"><span class="kv-label">股數</span><span class="kv-value">40</span></div>
-        <div class="kv-item"><span class="kv-label">股價</span><span class="kv-value">39.45</span></div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-title">3443 創意</div>
-      <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">9 月營收年增近翻倍改寫同期新高，三大法人同步買超大漲 +6.94% 收復季線。11 月 10 日收在 7,170.00 元（+465.00 元, +6.94%），開盤 7,000.00 元、最高 7,375.00 元、最低 6,900.00 元，成交量 3,971 張。外資買超 263 張、投信買超 245 張。受惠 AI ASIC 晶片量產與先進封裝委託認列，日 K 呈帶量實體長紅棒，收盤一舉站上 60MA 季線 (6,880 元)，展現強勢領頭羊態勢。</p>
-      <div class="kv-row" style="margin-top: 0.75rem;">
-        <div class="kv-item"><span class="kv-label">成本</span><span class="kv-value">7,346.00</span></div>
-        <div class="kv-item"><span class="kv-label">股數</span><span class="kv-value">4</span></div>
-        <div class="kv-item"><span class="kv-label">股價</span><span class="kv-value">7,170.00</span></div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-title">3533 嘉澤</div>
-      <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">9 月營收創同期高續揚 +3.23% 收復 60MA，盤中衝高 1,860 元遇月線反壓留長上影線。11 月 10 日收在 1,760.00 元（+55.00 元, +3.23%），開盤 1,715.00 元、最高 1,860.00 元、最低 1,710.00 元，成交量 1,619 張。外資買超 100 張、投信買超 32 張、自營商買超 27 張，三大法人同步買超 159 張。盤中一度強攻年線 1,847 元與 20MA (1,812 元)，但解套賣壓湧現留百元上影線，單一持股佔比達 27.10% 嚴重超標。</p>
-      <div class="kv-row" style="margin-top: 0.75rem;">
-        <div class="kv-item"><span class="kv-label">成本</span><span class="kv-value">1,839.00</span></div>
-        <div class="kv-item"><span class="kv-label">股數</span><span class="kv-value">78</span></div>
-        <div class="kv-item"><span class="kv-label">股價</span><span class="kv-value">1,760.00</span></div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-title">3324 雙鴻</div>
-      <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">水冷散熱龍頭獲投信大買 397 張，跳空勁揚 +7.39% 收在 1,235 元站上 5MA。11 月 10 日收在 1,235.00 元（+85.00 元, +7.39%），開盤 1,190.00 元、最高 1,255.00 元、最低 1,180.00 元，成交量 6,637 張。投信買超 397 張、自營商買超 11 張，外資賣超 168 張。受惠 Blackwell 水冷板放量在即，日 K 跳空長紅站上 5MA (1,182 元)，短線底部型態成形。</p>
-      <div class="kv-row" style="margin-top: 0.75rem;">
-        <div class="kv-item"><span class="kv-label">成本</span><span class="kv-value">1,246.04</span></div>
-        <div class="kv-item"><span class="kv-label">股數</span><span class="kv-value">24</span></div>
-        <div class="kv-item"><span class="kv-label">股價</span><span class="kv-value">1,235.00</span></div>
-      </div>
-    </div>
-  </section>
+		<!-- 持股情報 -->
+		<section class="section">
+			<h2 class="section-title">持股情報</h2>
+			<div class="card">
+				<div class="card-title">2383 台光電</div>
+				<p style="font-size: 0.9rem; margin-bottom: 0.5rem;">銅箔基板龍頭跳空強彈 +7.25% 站上 5MA，外資小幅調節但投信力挺。11 月 10 日收在 4,365.00 元（+295.00 元, +7.25%），開盤 4,370.00 元、最高 4,475.00 元、最低 4,160.00 元，成交量 5,988 張。外資賣超 442 張，但投信買超 147 張。受惠美系雲端巨頭高階交換機與 AI 伺服器載板需求強勁，股價放量長紅站回 5MA (4,182 元)，短線脫離成本區翻正獲利。</p>
+				<div class="kv-row" style="margin-top: 0.75rem;">
+					<div class="kv-item"><span class="kv-label">成本</span><span class="kv-value">4,298.60</span></div>
+					<div class="kv-item"><span class="kv-label">股數</span><span class="kv-value">5</span></div>
+					<div class="kv-item"><span class="kv-label">股價</span><span class="kv-value">4,365.00</span></div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-title">2887 台新新光金</div>
+				<p style="font-size: 0.9rem; margin-bottom: 0.5rem;">投信由連 20 買轉手大砍 2,315 張，股價跌破短均線收 39.45 元。11 月 10 日收在 39.45 元（-0.50 元, -1.25%），開盤 40.00 元、最高 40.55 元、最低 39.15 元，成交量 70,140 張。投信反手賣超 2,315 張、外資買超 7,542 張、自營商買超 760 張。受內資籌碼調節影響，股價跌破 5MA (39.64 元) 與 10MA (40.78 元)，帳面淨虧損擴大至 -8.53%，擊穿停損門檻。</p>
+				<div class="kv-row" style="margin-top: 0.75rem;">
+					<div class="kv-item"><span class="kv-label">成本</span><span class="kv-value">42.20</span></div>
+					<div class="kv-item"><span class="kv-label">股數</span><span class="kv-value">40</span></div>
+					<div class="kv-item"><span class="kv-label">股價</span><span class="kv-value">39.45</span></div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-title">3443 創意</div>
+				<p style="font-size: 0.9rem; margin-bottom: 0.5rem;">9 月營收年增近翻倍改寫同期新高，三大法人同步買超大漲 +6.94% 收復季線。11 月 10 日收在 7,170.00 元（+465.00 元, +6.94%），開盤 7,000.00 元、最高 7,375.00 元、最低 6,900.00 元，成交量 3,971 張。外資買超 263 張、投信買超 245 張。受惠 AI ASIC 晶片量產與先進封裝委託認列，日 K 呈帶量實體長紅棒，收盤一舉站上 60MA 季線 (6,880 元)，展現強勢領頭羊態勢。</p>
+				<div class="kv-row" style="margin-top: 0.75rem;">
+					<div class="kv-item"><span class="kv-label">成本</span><span class="kv-value">7,346.00</span></div>
+					<div class="kv-item"><span class="kv-label">股數</span><span class="kv-value">4</span></div>
+					<div class="kv-item"><span class="kv-label">股價</span><span class="kv-value">7,170.00</span></div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-title">3533 嘉澤</div>
+				<p style="font-size: 0.9rem; margin-bottom: 0.5rem;">9 月營收創同期高續揚 +3.23% 收復 60MA，盤中衝高 1,860 元遇月線反壓留長上影線。11 月 10 日收在 1,760.00 元（+55.00 元, +3.23%），開盤 1,715.00 元、最高 1,860.00 元、最低 1,710.00 元，成交量 1,619 張。外資買超 100 張、投信買超 32 張、自營商買超 27 張，三大法人同步買超 159 張。盤中一度強攻年線 1,847 元與 20MA (1,812 元)，但解套賣壓湧現留百元上影線，單一持股佔比達 27.10% 嚴重超標。</p>
+				<div class="kv-row" style="margin-top: 0.75rem;">
+					<div class="kv-item"><span class="kv-label">成本</span><span class="kv-value">1,839.00</span></div>
+					<div class="kv-item"><span class="kv-label">股數</span><span class="kv-value">78</span></div>
+					<div class="kv-item"><span class="kv-label">股價</span><span class="kv-value">1,760.00</span></div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-title">3324 雙鴻</div>
+				<p style="font-size: 0.9rem; margin-bottom: 0.5rem;">水冷散熱龍頭獲投信大買 397 張，跳空勁揚 +7.39% 收在 1,235 元站上 5MA。11 月 10 日收在 1,235.00 元（+85.00 元, +7.39%），開盤 1,190.00 元、最高 1,255.00 元、最低 1,180.00 元，成交量 6,637 張。投信買超 397 張、自營商買超 11 張，外資賣超 168 張。受惠 Blackwell 水冷板放量在即，日 K 跳空長紅站上 5MA (1,182 元)，短線底部型態成形。</p>
+				<div class="kv-row" style="margin-top: 0.75rem;">
+					<div class="kv-item"><span class="kv-label">成本</span><span class="kv-value">1,246.04</span></div>
+					<div class="kv-item"><span class="kv-label">股數</span><span class="kv-value">24</span></div>
+					<div class="kv-item"><span class="kv-label">股價</span><span class="kv-value">1,235.00</span></div>
+				</div>
+			</div>
+		</section>
 
-  <!-- 指定個股情報 -->
-  <section class="section">
-    <h2 class="section-title">指定個股情報</h2>
-    <div class="card">
-      <div class="card-title">2327 國巨*</div>
-      <p style="font-size: 0.9rem;">被動元件龍頭隨大盤續彈收在 402.00 元 (+2.55%)，逼近前波缺口 404.50 元。外資賣壓趨緩，但上方 10MA (442 元) 與 20MA (482 元) 下彎蓋頭，反彈追價意願仍顯謹慎。</p>
-    </div>
-    <div class="card">
-      <div class="card-title">2408 南亞科</div>
-      <p style="font-size: 0.9rem;">記憶體大廠跳空衝高 402 元留長上影線，終場漲 +3.51% 收 383.00 元。呈現劇烈土洋對作：外資大買 7,281 張，但投信大賣 2,989 張，受制於 10MA (413 元) 反壓。</p>
-    </div>
-    <div class="card">
-      <div class="card-title">2409 友達</div>
-      <p style="font-size: 0.9rem;">面板族群低檔小紅十字星整理收在 27.55 元 (+1.29%)。成交量萎縮，均線全面空頭排列，第四季淡季缺乏基本面催化劑。</p>
-    </div>
-    <div class="card">
-      <div class="card-title">3529 力旺</div>
-      <p style="font-size: 0.9rem;">10 月營收月增逾 3 倍帶動續揚，上漲 +3.46% 收在 2,240.00 元，正式站上 5MA (2,175 元)，但 10MA (2,275 元) 與月線 (2,340 元) 仍呈下彎反壓。</p>
-    </div>
-    <div class="card">
-      <div class="card-title">3661 世芯-KY</div>
-      <p style="font-size: 0.9rem;">受創意大漲激勵展開比價效應，上漲 +3.91% 收復 3,055.00 元並站回 5MA。投信與外資買盤回流，挑戰 10MA (3,065 元) 壓力。</p>
-    </div>
-    <div class="card">
-      <div class="card-title">4960 誠美材</div>
-      <p style="font-size: 0.9rem;">昨日漲停後今日爆量 3.1 萬張開高走低，終場翻黑下跌 -1.17% 收 29.55 元，留長達 2.5 元上影線並跌破 5MA，短線主力逢高倒貨痕跡明顯。</p>
-    </div>
-    <div class="card">
-      <div class="card-title">5425 台半</div>
-      <p style="font-size: 0.9rem;">跳空續揚 +4.07% 收在 79.20 元，盤中衝高 82.10 元碰觸 10MA 留上影線。三大法人同步買超 88 張，守穩年線 78 元之上。</p>
-    </div>
-    <div class="card">
-      <div class="card-title">5483 中美晶</div>
-      <p style="font-size: 0.9rem;">母以子貴隨環球晶強彈，上漲 +3.72% 收在 153.50 元，站回 5MA (148.5 元)，但上方 10MA (153.8 元) 與季線仍有反壓。</p>
-    </div>
-    <div class="card">
-      <div class="card-title">6239 力成</div>
-      <p style="font-size: 0.9rem;">衝高 240 元遭外資逢高倒貨 1,979 張，終場漲幅收斂至 +2.91% 收 230.00 元，留 10 元上影線，高檔換手賣壓出籠。</p>
-    </div>
-    <div class="card">
-      <div class="card-title">6770 力積電</div>
-      <p style="font-size: 0.9rem;">爆出 13.4 萬張天量開高走低留長上影線黑 K，終場僅小漲 +1.89% 收 59.20 元。外資狂倒 8,352 張、自營商大賣 2,983 張，隔日沖大戶出貨手法顯著。</p>
-    </div>
-    <div class="card">
-      <div class="card-title">8086 宏捷科</div>
-      <p style="font-size: 0.9rem;">砷化鎵 PA 跌深反抽上漲 +5.60% 收 99.90 元，站上 5MA。成交量僅 4,295 張呈價漲量縮，各級均線仍嚴重空頭下彎。</p>
-    </div>
-  </section>
+		<!-- 指定個股情報 -->
+		<section class="section">
+			<h2 class="section-title">指定個股情報</h2>
+			<div class="card">
+				<div class="card-title">2327 國巨*</div>
+				<p style="font-size: 0.9rem;">被動元件龍頭隨大盤續彈收在 402.00 元 (+2.55%)，逼近前波缺口 404.50 元。外資賣壓趨緩，但上方 10MA (442 元) 與 20MA (482 元) 下彎蓋頭，反彈追價意願仍顯謹慎。</p>
+			</div>
+			<div class="card">
+				<div class="card-title">2408 南亞科</div>
+				<p style="font-size: 0.9rem;">記憶體大廠跳空衝高 402 元留長上影線，終場漲 +3.51% 收 383.00 元。呈現劇烈土洋對作：外資大買 7,281 張，但投信大賣 2,989 張，受制於 10MA (413 元) 反壓。</p>
+			</div>
+			<div class="card">
+				<div class="card-title">2409 友達</div>
+				<p style="font-size: 0.9rem;">面板族群低檔小紅十字星整理收在 27.55 元 (+1.29%)。成交量萎縮，均線全面空頭排列，第四季淡季缺乏基本面催化劑。</p>
+			</div>
+			<div class="card">
+				<div class="card-title">3529 力旺</div>
+				<p style="font-size: 0.9rem;">10 月營收月增逾 3 倍帶動續揚，上漲 +3.46% 收在 2,240.00 元，正式站上 5MA (2,175 元)，但 10MA (2,275 元) 與月線 (2,340 元) 仍呈下彎反壓。</p>
+			</div>
+			<div class="card">
+				<div class="card-title">3661 世芯-KY</div>
+				<p style="font-size: 0.9rem;">受創意大漲激勵展開比價效應，上漲 +3.91% 收復 3,055.00 元並站回 5MA。投信與外資買盤回流，挑戰 10MA (3,065 元) 壓力。</p>
+			</div>
+			<div class="card">
+				<div class="card-title">4960 誠美材</div>
+				<p style="font-size: 0.9rem;">昨日漲停後今日爆量 3.1 萬張開高走低，終場翻黑下跌 -1.17% 收 29.55 元，留長達 2.5 元上影線並跌破 5MA，短線主力逢高倒貨痕跡明顯。</p>
+			</div>
+			<div class="card">
+				<div class="card-title">5425 台半</div>
+				<p style="font-size: 0.9rem;">跳空續揚 +4.07% 收在 79.20 元，盤中衝高 82.10 元碰觸 10MA 留上影線。三大法人同步買超 88 張，守穩年線 78 元之上。</p>
+			</div>
+			<div class="card">
+				<div class="card-title">5483 中美晶</div>
+				<p style="font-size: 0.9rem;">母以子貴隨環球晶強彈，上漲 +3.72% 收在 153.50 元，站回 5MA (148.5 元)，但上方 10MA (153.8 元) 與季線仍有反壓。</p>
+			</div>
+			<div class="card">
+				<div class="card-title">6239 力成</div>
+				<p style="font-size: 0.9rem;">衝高 240 元遭外資逢高倒貨 1,979 張，終場漲幅收斂至 +2.91% 收 230.00 元，留 10 元上影線，高檔換手賣壓出籠。</p>
+			</div>
+			<div class="card">
+				<div class="card-title">6770 力積電</div>
+				<p style="font-size: 0.9rem;">爆出 13.4 萬張天量開高走低留長上影線黑 K，終場僅小漲 +1.89% 收 59.20 元。外資狂倒 8,352 張、自營商大賣 2,983 張，隔日沖大戶出貨手法顯著。</p>
+			</div>
+			<div class="card">
+				<div class="card-title">8086 宏捷科</div>
+				<p style="font-size: 0.9rem;">砷化鎵 PA 跌深反抽上漲 +5.60% 收 99.90 元，站上 5MA。成交量僅 4,295 張呈價漲量縮，各級均線仍嚴重空頭下彎。</p>
+			</div>
+		</section>
 
-  <!-- 未來重要事件 -->
-  <section class="section">
-    <h2 class="section-title">未來 2 週重要事件</h2>
-    <ul class="event-list">
-      <li class="event-item">
-        <span class="event-date">11/10</span>
-        <div>台灣上市櫃公司公告 10 月合併營收法定截止日；MSCI 明晟公布半年度指數成分股權重調整。</div>
-      </li>
-      <li class="event-item">
-        <span class="event-date">11/11</span>
-        <div>美國退伍軍人紀念日（美債休市，美股正常交易）；世芯-KY (3661) 召開線上法說會。</div>
-      </li>
-      <li class="event-item">
-        <span class="event-date">11/12</span>
-        <div>美國勞工統計局公布 10 月 CPI 與核心 CPI 通膨數據（全球利率與科技折現最關鍵總經數據）。</div>
-      </li>
-      <li class="event-item">
-        <span class="event-date">11/13</span>
-        <div>美國公布 10 月 PPI 生產者物價指數；聯準會主席鮑爾與多位票委發表公開談話。</div>
-      </li>
-      <li class="event-item">
-        <span class="event-date">11/14</span>
-        <div>台灣上市櫃公司 2026 年第三季財報申報法定截止日。</div>
-      </li>
-      <li class="event-item">
-        <span class="event-date">11/18</span>
-        <div>台灣期貨交易所 11 月台指期合約結算日（關注 9.05 萬口外資淨空單壓低或轉倉動向）。</div>
-      </li>
-      <li class="event-item">
-        <span class="event-date">11/19</span>
-        <div>輝達 (NVIDIA) 公布 2027 會計年度最新季報與 Blackwell 次世代晶片出貨進度。</div>
-      </li>
-      <li class="event-item">
-        <span class="event-date">11/20</span>
-        <div>美股 11 月月度期權集中到期結算日 (Monthly OPEX)。</div>
-      </li>
-      <li class="event-item">
-        <span class="event-date">11/24</span>
-        <div>台灣國發會公布 10 月景氣對策信號燈號與經濟綜合分數。</div>
-      </li>
-    </ul>
-  </section>
-</main>
+		<!-- 未來重要事件 -->
+		<section class="section">
+			<h2 class="section-title">未來 2 週重要事件</h2>
+			<ul class="event-list">
+				<li class="event-item">
+					<span class="event-date">11/10</span>
+					<div>台灣上市櫃公司公告 10 月合併營收法定截止日；MSCI 明晟公布半年度指數成分股權重調整。</div>
+				</li>
+				<li class="event-item">
+					<span class="event-date">11/11</span>
+					<div>美國退伍軍人紀念日（美債休市，美股正常交易）；世芯-KY (3661) 召開線上法說會。</div>
+				</li>
+				<li class="event-item">
+					<span class="event-date">11/12</span>
+					<div>美國勞工統計局公布 10 月 CPI 與核心 CPI 通膨數據（全球利率與科技折現最關鍵總經數據）。</div>
+				</li>
+				<li class="event-item">
+					<span class="event-date">11/13</span>
+					<div>美國公布 10 月 PPI 生產者物價指數；聯準會主席鮑爾與多位票委發表公開談話。</div>
+				</li>
+				<li class="event-item">
+					<span class="event-date">11/14</span>
+					<div>台灣上市櫃公司 2026 年第三季財報申報法定截止日。</div>
+				</li>
+				<li class="event-item">
+					<span class="event-date">11/18</span>
+					<div>台灣期貨交易所 11 月台指期合約結算日（關注 9.05 萬口外資淨空單壓低或轉倉動向）。</div>
+				</li>
+				<li class="event-item">
+					<span class="event-date">11/19</span>
+					<div>輝達 (NVIDIA) 公布 2027 會計年度最新季報與 Blackwell 次世代晶片出貨進度。</div>
+				</li>
+				<li class="event-item">
+					<span class="event-date">11/20</span>
+					<div>美股 11 月月度期權集中到期結算日 (Monthly OPEX)。</div>
+				</li>
+				<li class="event-item">
+					<span class="event-date">11/24</span>
+					<div>台灣國發會公布 10 月景氣對策信號燈號與經濟綜合分數。</div>
+				</li>
+			</ul>
+		</section>
+	</main>
 
-<button class="go-top-btn" id="goTopBtn" aria-label="回到頁首">
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M18 15l-6-6-6 6"/>
-  </svg>
-</button>
+	<button class="go-top-btn" id="goTopBtn" aria-label="回到頁首">
+		<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+			<path d="M18 15l-6-6-6 6" />
+		</svg>
+	</button>
 
-<footer class="site-footer">
-  STARCK Research &mdash; 僅供個人參考使用
-</footer>
+	<footer class="site-footer">
+		STARCK Research &mdash; 僅供個人參考使用
+	</footer>
 
-<script src="js/main.js"></script>
+	<script src="js/main.js"></script>
 </body>
+
 </html>

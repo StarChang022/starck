@@ -1,335 +1,384 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zhu-Jiahong — STARCK Research</title>
-  <meta name="description" content="Zhu-Jiahong 交易決策：大盤趨勢分析、均線系統、法人籌碼、持股分析與風控審查報告。">
-  <link rel="icon" type="image/png" href="images/favicon.png">
-  <link rel="stylesheet" href="css/style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Zhu-Jiahong — STARCK Research</title>
+	<meta name="description" content="Zhu-Jiahong 交易決策：大盤趨勢分析、均線系統、法人籌碼、持股分析與風控審查報告。">
+	<link rel="icon" type="image/png" href="images/favicon.png">
+	<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<header class="site-header">
-  <div class="header-inner">
-    <a href="index.html" class="logo-link">
-      <img src="images/logo.png" alt="STARCK Research">
-    </a>
-    <nav>
-      <ul class="nav-menu">
-        <li><a href="intelligence.html">今日市場情報</a></li>
-        <li><a href="jiahong.html" class="active">Zhu-Jiahong</a></li>
-        <li><a href="swing.html">Mark-Minervini</a></li>
-        <li><a href="kelly.html">John-Larry-Kelly</a></li>
-        <li><a href="value.html">價值投資分析</a></li>
-      </ul>
-    </nav>
-    <button class="hamburger" id="hamburger" aria-label="開啟選單">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
+	<header class="site-header">
+		<div class="header-inner">
+			<a href="index.html" class="logo-link">
+				<img src="images/logo.png" alt="STARCK Research">
+			</a>
+			<nav>
+				<ul class="nav-menu" id="navMenu">
+					<li><a href="intelligence.html">今日市場情報</a></li>
+					<li><a href="jiahong.html">Jiahong</a></li>
+					<li><a href="swing.html">Minervini</a></li>
+					<li><a href="kelly.html">Kelly</a></li>
+					<li><a href="value.html">價值投資分析</a></li>
+				</ul>
+			</nav>
+			<button class="hamburger" id="hamburger" aria-label="開啟選單">
+				<span></span><span></span><span></span>
+			</button>
+		</div>
+	</header>
 
-<nav class="nav-overlay" id="navOverlay">
-  <a href="intelligence.html">今日市場情報</a>
-  <a href="jiahong.html" class="active">Zhu-Jiahong</a>
-  <a href="swing.html">Mark-Minervini</a>
-  <a href="kelly.html">John-Larry-Kelly</a>
-  <a href="value.html">價值投資分析</a>
-</nav>
+	<nav class="nav-overlay" id="navOverlay" aria-label="行動選單">
+		<a href="intelligence.html">今日市場情報</a>
+		<a href="jiahong.html">Jiahong</a>
+		<a href="swing.html">Minervini</a>
+		<a href="kelly.html">Kelly</a>
+		<a href="value.html">價值投資分析</a>
+	</nav>
 
-<main class="page-wrapper">
-  <h1>Zhu-Jiahong</h1>
-  <span class="report-date">報告撰寫日期：2026 年 11 月 10 日</span>
+	<main class="page-wrapper">
+		<h1>Zhu-Jiahong</h1>
+		<span class="report-date">報告撰寫日期：2026 年 11 月 10 日</span>
 
-  <!-- 大盤趨勢 -->
-  <section class="section">
-    <h2 class="section-title">大盤趨勢</h2>
-    <p>大盤確認處於<strong>空頭主跌段後的跌深技術性反抽，正面臨 10MA 重壓</strong>。加權指數今日雖隨美股續揚 +1,050.22 點收在 42,711.92 點並收復 5MA，但盤中留 424 點長上影線，成交金額 10,323 億元未顯著放量，上方下彎之 10MA (43,544 點) 與 20MA 生命線 (45,396 點) 蓋頭反壓沉重，尚未扭轉「頭頭低、底底低」之波段空頭格局。</p>
-    <div class="kv-row">
-      <div class="kv-item"><span class="kv-label">加權指數 TWSE</span><span class="kv-value pos">42,711.92 （+1,050.22, +2.52%）</span></div>
-      <div class="kv-item"><span class="kv-label">櫃買指數 TPEx</span><span class="kv-value pos">332.97 （+11.00, +3.42%）</span></div>
-      <div class="kv-item"><span class="kv-label">整體操作方向</span><span class="kv-value">嚴格防守減碼、趁反彈強制處置違規部位、嚴禁追價開新倉。</span></div>
-      <div class="kv-item"><span class="kv-label">總資金水位規劃</span><span class="kv-value">依據朱家泓「空頭市場資金配比需降至 30% 以下或全現金」之鐵律，目前帳戶總資產 505,120 元，股票市值 218,083 元（佔比 43.17% 嚴重超標）。次日開盤必須無條件強制執行 3533 嘉澤減碼 38 股與 2887 台新新光金出清 40 股，收回約 6.84 萬元現金，將股票持股水位壓降至 29.66%，現金儲備拉升至 70.34% 安全水位。</span></div>
-    </div>
-    <div class="sub-block">
-      <div class="sub-block-title">指數與價量結構</div>
-      <p style="font-size: 0.875rem;">加權指數 11 月 10 日開盤 42,130.33 點、最高衝至 43,135.92 點、最低 41,930.03 點，終場上漲 <strong>+1,050.22 點 (+2.52%)</strong> 收在 <strong>42,711.92 點</strong>。全日成交金額為 <strong>10,323 億元</strong>（較昨日放大 17.71%），成功收復 5MA (41,719.78 點)。但早盤衝破 43,000 點逼近 10MA (43,544 點) 時，引發解套與隔日沖賣壓，日 K 留 424 點長上影線。櫃買指數 TPEx 上漲 <strong>+11.00 點 (+3.42%)</strong> 收在 <strong>332.97 點</strong>，成交金額 2,081 億元，同步受阻於下彎均線反壓。</p>
-    </div>
-    <div class="sub-block">
-      <div class="sub-block-title">趨勢與均線型態</div>
-      <p style="font-size: 0.875rem;">加權指數均線排列呈現 <strong>60MA (46,320.63) &gt; 20MA (45,396.65) &gt; 120MA (45,359.07) &gt; 10MA (43,544.23) &gt; 5MA (41,719.78) &gt; 240MA (38,954.41)</strong>。各天期中長期均線呈空頭排列向下發散，指數雖收復 5MA，但 20MA 生命線 (45,396 點) 負乖離率仍達 -5.91%，且 20MA 與 60MA 季線斜率持續下彎。依據朱家泓「趨勢六字訣」檢驗，大盤仍屬「<strong>頭頭低、底底低</strong>」波段空頭架構，反彈遇下彎 10MA 與 20MA 反壓，嚴禁盲目追高搶進。</p>
-      <div class="table-scroll" style="margin-top: 0.75rem;">
-        <table class="data-table">
-          <thead><tr><th>均線</th><th class="num">點位</th><th>狀態</th></tr></thead>
-          <tbody>
-            <tr><td>5MA</td><td class="num pos">41,719.78</td><td>今日站上，短線反彈下檔支撐</td></tr>
-            <tr><td>10MA</td><td class="num neg">43,544.23</td><td>陡峭下彎，短線第一道重度蓋頭反壓</td></tr>
-            <tr><td>20MA</td><td class="num neg">45,396.65</td><td>生命線持續陡峭下彎，波段反轉關鍵關卡</td></tr>
-            <tr><td>60MA</td><td class="num neg">46,320.63</td><td>季線持續下彎，空頭中期趨勢確立</td></tr>
-            <tr><td>240MA</td><td class="num">38,954.41</td><td>年線向上支撐</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <div class="sub-block">
-      <div class="sub-block-title">法人籌碼</div>
-      <p style="font-size: 0.875rem;">11 月 10 日三大法人合計賣超 <strong>-148.23 億元</strong>。外資現貨連續第 9 個交易日賣超，單日再砍 <strong>-341.17 億元</strong>（累計連 9 賣達 8,297 億元）；自營商賣超 <strong>-175.36 億元</strong>；僅本土投信展現護盤決心連 21 買，單日大買 <strong>+368.29 億元</strong>。外資在台指期未平倉淨空單小幅回補 4,210 口至 <strong>90,520 口</strong>，仍盤據在 9 萬口以上極端高壓警戒區；新台幣匯率升值 6.5 分收在 <strong>32.785 元</strong>。 - <strong>外資</strong> : 賣超 341.17 億元 - <strong>投信</strong> : 買超 368.29 億元 - <strong>自營商</strong> : 賣超 175.36 億元</p>
-    </div>
-  </section>
+		<!-- 大盤趨勢 -->
+		<section class="section">
+			<h2 class="section-title">大盤趨勢</h2>
+			<p>大盤確認處於<strong>空頭主跌段後的跌深技術性反抽，正面臨 10MA 重壓</strong>。加權指數今日雖隨美股續揚 +1,050.22 點收在 42,711.92 點並收復 5MA，但盤中留 424 點長上影線，成交金額 10,323 億元未顯著放量，上方下彎之 10MA (43,544 點) 與 20MA 生命線 (45,396 點) 蓋頭反壓沉重，尚未扭轉「頭頭低、底底低」之波段空頭格局。</p>
+			<div class="kv-row">
+				<div class="kv-item"><span class="kv-label">加權指數 TWSE</span><span class="kv-value pos">42,711.92 （+1,050.22, +2.52%）</span></div>
+				<div class="kv-item"><span class="kv-label">櫃買指數 TPEx</span><span class="kv-value pos">332.97 （+11.00, +3.42%）</span></div>
+				<div class="kv-item"><span class="kv-label">整體操作方向</span><span class="kv-value">嚴格防守減碼、趁反彈強制處置違規部位、嚴禁追價開新倉。</span></div>
+				<div class="kv-item"><span class="kv-label">總資金水位規劃</span><span class="kv-value">依據朱家泓「空頭市場資金配比需降至 30% 以下或全現金」之鐵律，目前帳戶總資產 505,120 元，股票市值 218,083 元（佔比 43.17% 嚴重超標）。次日開盤必須無條件強制執行 3533 嘉澤減碼 38 股與 2887 台新新光金出清 40 股，收回約 6.84 萬元現金，將股票持股水位壓降至 29.66%，現金儲備拉升至 70.34% 安全水位。</span></div>
+			</div>
+			<div class="sub-block">
+				<div class="sub-block-title">指數與價量結構</div>
+				<p style="font-size: 0.875rem;">加權指數 11 月 10 日開盤 42,130.33 點、最高衝至 43,135.92 點、最低 41,930.03 點，終場上漲 <strong>+1,050.22 點 (+2.52%)</strong> 收在 <strong>42,711.92 點</strong>。全日成交金額為 <strong>10,323 億元</strong>（較昨日放大 17.71%），成功收復 5MA (41,719.78 點)。但早盤衝破 43,000 點逼近 10MA (43,544 點) 時，引發解套與隔日沖賣壓，日 K 留 424 點長上影線。櫃買指數 TPEx 上漲 <strong>+11.00 點 (+3.42%)</strong> 收在 <strong>332.97 點</strong>，成交金額 2,081 億元，同步受阻於下彎均線反壓。</p>
+			</div>
+			<div class="sub-block">
+				<div class="sub-block-title">趨勢與均線型態</div>
+				<p style="font-size: 0.875rem;">加權指數均線排列呈現 <strong>60MA (46,320.63) &gt; 20MA (45,396.65) &gt; 120MA (45,359.07) &gt; 10MA (43,544.23) &gt; 5MA (41,719.78) &gt; 240MA (38,954.41)</strong>。各天期中長期均線呈空頭排列向下發散，指數雖收復 5MA，但 20MA 生命線 (45,396 點) 負乖離率仍達 -5.91%，且 20MA 與 60MA 季線斜率持續下彎。依據朱家泓「趨勢六字訣」檢驗，大盤仍屬「<strong>頭頭低、底底低</strong>」波段空頭架構，反彈遇下彎 10MA 與 20MA 反壓，嚴禁盲目追高搶進。</p>
+				<div class="table-scroll" style="margin-top: 0.75rem;">
+					<table class="data-table">
+						<thead>
+							<tr>
+								<th>均線</th>
+								<th class="num">點位</th>
+								<th>狀態</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>5MA</td>
+								<td class="num pos">41,719.78</td>
+								<td>今日站上，短線反彈下檔支撐</td>
+							</tr>
+							<tr>
+								<td>10MA</td>
+								<td class="num neg">43,544.23</td>
+								<td>陡峭下彎，短線第一道重度蓋頭反壓</td>
+							</tr>
+							<tr>
+								<td>20MA</td>
+								<td class="num neg">45,396.65</td>
+								<td>生命線持續陡峭下彎，波段反轉關鍵關卡</td>
+							</tr>
+							<tr>
+								<td>60MA</td>
+								<td class="num neg">46,320.63</td>
+								<td>季線持續下彎，空頭中期趨勢確立</td>
+							</tr>
+							<tr>
+								<td>240MA</td>
+								<td class="num">38,954.41</td>
+								<td>年線向上支撐</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="sub-block">
+				<div class="sub-block-title">法人籌碼</div>
+				<p style="font-size: 0.875rem;">11 月 10 日三大法人合計賣超 <strong>-148.23 億元</strong>。外資現貨連續第 9 個交易日賣超，單日再砍 <strong>-341.17 億元</strong>（累計連 9 賣達 8,297 億元）；自營商賣超 <strong>-175.36 億元</strong>；僅本土投信展現護盤決心連 21 買，單日大買 <strong>+368.29 億元</strong>。外資在台指期未平倉淨空單小幅回補 4,210 口至 <strong>90,520 口</strong>，仍盤據在 9 萬口以上極端高壓警戒區；新台幣匯率升值 6.5 分收在 <strong>32.785 元</strong>。 - <strong>外資</strong> : 賣超 341.17 億元 - <strong>投信</strong> : 買超 368.29 億元 - <strong>自營商</strong> : 賣超 175.36 億元</p>
+			</div>
+		</section>
 
-  <!-- 分析持股 -->
-  <section class="section">
-    <h2 class="section-title">分析持股</h2>
-    <div class="table-scroll">
-      <table class="data-table">
-        <thead>
-          <tr><th>項目</th><th class="num">金額 / 數據</th><th class="num">佔比 / 說明</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>投資組合</td><td class="num">5 檔個股</td><td class="num"></td></tr>
-          <tr><td>資產總計</td><td class="num">505,120 元</td><td class="num">100.00%</td></tr>
-          <tr><td>股票市值</td><td class="num">218,083 元</td><td class="num">43.17%（超出 30% 空頭安全上限）</td></tr>
-          <tr><td>現金總計</td><td class="num">287,037 元</td><td class="num">56.83%</td></tr>
-        </tbody>
-      </table>
-    </div>
+		<!-- 分析持股 -->
+		<section class="section">
+			<h2 class="section-title">分析持股</h2>
+			<div class="table-scroll">
+				<table class="data-table">
+					<thead>
+						<tr>
+							<th>項目</th>
+							<th class="num">金額 / 數據</th>
+							<th class="num">佔比 / 說明</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>投資組合</td>
+							<td class="num">5 檔個股</td>
+							<td class="num"></td>
+						</tr>
+						<tr>
+							<td>資產總計</td>
+							<td class="num">505,120 元</td>
+							<td class="num">100.00%</td>
+						</tr>
+						<tr>
+							<td>股票市值</td>
+							<td class="num">218,083 元</td>
+							<td class="num">43.17%（超出 30% 空頭安全上限）</td>
+						</tr>
+						<tr>
+							<td>現金總計</td>
+							<td class="num">287,037 元</td>
+							<td class="num">56.83%</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 
-    <!-- 2383 台光電 -->
-    <div class="card">
-      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
-        <div class="card-title" style="margin: 0;">2383 台光電</div>
-        <span class="badge badge-hold">⚪ 續抱</span>
-      </div>
-      <p style="font-size: 0.875rem;">交易策略建議 <strong>⚪ 續抱</strong>，守穩 5MA 與成本保本線。今日跳空長紅大漲 +7.25% 收在 4,365.00 元，帶量收復 5MA (4,182.00 元)。現價已高於成本 4,298.60 元，屬於狀況 A（脫離成本）。上方即將面臨 10MA (4,472 元) 與 20MA (4,855 元) 反壓，以今日起漲低點 4,160.00 元為技術停損線；盤中若衝高回落跌破成本保本線 4,325.00 元，立即獲利了結平倉出清。</p>
-      <div class="kv-row" style="margin-top: 0.75rem;">
-        <div class="kv-item"><span class="kv-label">成本</span><span class="kv-value">4,298.60</span></div>
-        <div class="kv-item"><span class="kv-label">股數</span><span class="kv-value">5</span></div>
-        <div class="kv-item"><span class="kv-label">股價</span><span class="kv-value">4,365.00</span></div>
-        <div class="kv-item"><span class="kv-label">佔比</span><span class="kv-value">4.28%</span></div>
-        <div class="kv-item"><span class="kv-label">損益</span><span class="kv-value pos">+63.00 (+0.29%)</span></div>
-      </div>
-      <div class="sub-block">
-        <div class="sub-block-title">K線、均線與法人籌碼</div>
-        <p style="font-size: 0.875rem;">日 K 呈跳空長紅棒，站上 5MA (4,182.00 元)，但 10MA (4,472 元)、20MA (4,855 元) 與季線 (5,258 元) 仍呈空頭下彎反壓。成交量放大至 5,988 張（為 20 日均量 4,001 張之 1.5 倍）。投信買超 147 張、外資賣超 442 張、自營商賣超 218 張。 - <strong>壓力</strong> : 10MA 4,472 元、今日高點 4,475 元。 - <strong>支撐</strong> : 5MA 4,182 元、今日低點 4,160 元。</p>
-      </div>
-    </div>
+			<!-- 2383 台光電 -->
+			<div class="card">
+				<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
+					<div class="card-title" style="margin: 0;">2383 台光電</div>
+					<span class="badge badge-hold">⚪ 續抱</span>
+				</div>
+				<p style="font-size: 0.875rem;">交易策略建議 <strong>⚪ 續抱</strong>，守穩 5MA 與成本保本線。今日跳空長紅大漲 +7.25% 收在 4,365.00 元，帶量收復 5MA (4,182.00 元)。現價已高於成本 4,298.60 元，屬於狀況 A（脫離成本）。上方即將面臨 10MA (4,472 元) 與 20MA (4,855 元) 反壓，以今日起漲低點 4,160.00 元為技術停損線；盤中若衝高回落跌破成本保本線 4,325.00 元，立即獲利了結平倉出清。</p>
+				<div class="kv-row" style="margin-top: 0.75rem;">
+					<div class="kv-item"><span class="kv-label">成本</span><span class="kv-value">4,298.60</span></div>
+					<div class="kv-item"><span class="kv-label">股數</span><span class="kv-value">5</span></div>
+					<div class="kv-item"><span class="kv-label">股價</span><span class="kv-value">4,365.00</span></div>
+					<div class="kv-item"><span class="kv-label">佔比</span><span class="kv-value">4.28%</span></div>
+					<div class="kv-item"><span class="kv-label">損益</span><span class="kv-value pos">+63.00 (+0.29%)</span></div>
+				</div>
+				<div class="sub-block">
+					<div class="sub-block-title">K線、均線與法人籌碼</div>
+					<p style="font-size: 0.875rem;">日 K 呈跳空長紅棒，站上 5MA (4,182.00 元)，但 10MA (4,472 元)、20MA (4,855 元) 與季線 (5,258 元) 仍呈空頭下彎反壓。成交量放大至 5,988 張（為 20 日均量 4,001 張之 1.5 倍）。投信買超 147 張、外資賣超 442 張、自營商賣超 218 張。 - <strong>壓力</strong> : 10MA 4,472 元、今日高點 4,475 元。 - <strong>支撐</strong> : 5MA 4,182 元、今日低點 4,160 元。</p>
+				</div>
+			</div>
 
-    <!-- 2887 台新新光金 -->
-    <div class="card">
-      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
-        <div class="card-title" style="margin: 0;">2887 台新新光金</div>
-        <span class="badge badge-sell">🔴 撤資</span>
-      </div>
-      <p style="font-size: 0.875rem;">交易策略建議 <strong>🔴 撤資</strong>，觸及 8% 硬停損且投信棄守，次日開盤市價出清平倉。今日逆勢下跌 -1.25% 收在 39.45 元，日線跌破 5MA (39.64 元)，短中均線全面呈空頭排列。帳面淨虧損達 <strong>-8.53%</strong>，直接擊穿 8% 最大停損硬性上限（P1）；且投信由連 20 買轉手大賣 2,315 張，失去籌碼防護。次日開盤必須無條件市價出清 40 股，全面撤資平倉，消除風險。</p>
-      <div class="kv-row" style="margin-top: 0.75rem;">
-        <div class="kv-item"><span class="kv-label">成本</span><span class="kv-value">42.20</span></div>
-        <div class="kv-item"><span class="kv-label">股數</span><span class="kv-value">40</span></div>
-        <div class="kv-item"><span class="kv-label">股價</span><span class="kv-value">39.45</span></div>
-        <div class="kv-item"><span class="kv-label">佔比</span><span class="kv-value">0.31%</span></div>
-        <div class="kv-item"><span class="kv-label">損益</span><span class="kv-value neg">-144.00 (-8.53%)</span></div>
-      </div>
-      <div class="sub-block">
-        <div class="sub-block-title">K線、均線與法人籌碼</div>
-        <p style="font-size: 0.875rem;">日 K 呈小黑棒跌破 5MA，均線排列 20MA (41.51) &gt; 10MA (40.78) &gt; 60MA (40.77) &gt; 5MA (39.64)。全日成交量 70,140 張。投信大賣 2,315 張、外資買超 7,542 張、自營商買超 760 張。 - <strong>壓力</strong> : 5MA 39.64 元、10MA 40.78 元。 - <strong>支撐</strong> : 今日低點 39.15 元、前波低點 36.30 元。</p>
-      </div>
-    </div>
+			<!-- 2887 台新新光金 -->
+			<div class="card">
+				<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
+					<div class="card-title" style="margin: 0;">2887 台新新光金</div>
+					<span class="badge badge-sell">🔴 撤資</span>
+				</div>
+				<p style="font-size: 0.875rem;">交易策略建議 <strong>🔴 撤資</strong>，觸及 8% 硬停損且投信棄守，次日開盤市價出清平倉。今日逆勢下跌 -1.25% 收在 39.45 元，日線跌破 5MA (39.64 元)，短中均線全面呈空頭排列。帳面淨虧損達 <strong>-8.53%</strong>，直接擊穿 8% 最大停損硬性上限（P1）；且投信由連 20 買轉手大賣 2,315 張，失去籌碼防護。次日開盤必須無條件市價出清 40 股，全面撤資平倉，消除風險。</p>
+				<div class="kv-row" style="margin-top: 0.75rem;">
+					<div class="kv-item"><span class="kv-label">成本</span><span class="kv-value">42.20</span></div>
+					<div class="kv-item"><span class="kv-label">股數</span><span class="kv-value">40</span></div>
+					<div class="kv-item"><span class="kv-label">股價</span><span class="kv-value">39.45</span></div>
+					<div class="kv-item"><span class="kv-label">佔比</span><span class="kv-value">0.31%</span></div>
+					<div class="kv-item"><span class="kv-label">損益</span><span class="kv-value neg">-144.00 (-8.53%)</span></div>
+				</div>
+				<div class="sub-block">
+					<div class="sub-block-title">K線、均線與法人籌碼</div>
+					<p style="font-size: 0.875rem;">日 K 呈小黑棒跌破 5MA，均線排列 20MA (41.51) &gt; 10MA (40.78) &gt; 60MA (40.77) &gt; 5MA (39.64)。全日成交量 70,140 張。投信大賣 2,315 張、外資買超 7,542 張、自營商買超 760 張。 - <strong>壓力</strong> : 5MA 39.64 元、10MA 40.78 元。 - <strong>支撐</strong> : 今日低點 39.15 元、前波低點 36.30 元。</p>
+				</div>
+			</div>
 
-    <!-- 3443 創意 -->
-    <div class="card">
-      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
-        <div class="card-title" style="margin: 0;">3443 創意</div>
-        <span class="badge badge-hold">⚪ 續抱</span>
-      </div>
-      <p style="font-size: 0.875rem;">交易策略建議 <strong>⚪ 續抱</strong>，強勢收復季線，守穩 60MA 技術結構防線。9 月營收年增 +97.76% 創高，今日帶量大漲 +6.94% 收在 7,170.00 元，站回 5MA、10MA 與 60MA 季線 (6,880.42 元)，為全投組唯一符合 Stage 2 趨勢範本之多頭標的。三大法人聯手買超，以今日盤中起漲低點與季線 <strong>6,880.00 元</strong> 為技術防守線（停損幅度 -6.34% $\le 8\%$），守穩維持續抱，跌破斷然停損。</p>
-      <div class="kv-row" style="margin-top: 0.75rem;">
-        <div class="kv-item"><span class="kv-label">成本</span><span class="kv-value">7,346.00</span></div>
-        <div class="kv-item"><span class="kv-label">股數</span><span class="kv-value">4</span></div>
-        <div class="kv-item"><span class="kv-label">股價</span><span class="kv-value">7,170.00</span></div>
-        <div class="kv-item"><span class="kv-label">佔比</span><span class="kv-value">5.66%</span></div>
-        <div class="kv-item"><span class="kv-label">損益</span><span class="kv-value neg">-910.00 (-3.08%)</span></div>
-      </div>
-      <div class="sub-block">
-        <div class="sub-block-title">K線、均線與法人籌碼</div>
-        <p style="font-size: 0.875rem;">日 K 呈帶量實體長紅棒，站上 60MA 季線 (6,880.42 元) 與 10MA (7,112.50 元)。全日成交量 3,971 張（為 20 日均量 1.64 倍）。外資買超 263 張、投信買超 245 張、自營商賣超 37 張，三大法人合計買超 471 張。 - <strong>壓力</strong> : 20MA 7,465 元、今日高點 7,375 元。 - <strong>支撐</strong> : 60MA 季線 6,880 元、今日低點 6,900 元。</p>
-      </div>
-    </div>
+			<!-- 3443 創意 -->
+			<div class="card">
+				<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
+					<div class="card-title" style="margin: 0;">3443 創意</div>
+					<span class="badge badge-hold">⚪ 續抱</span>
+				</div>
+				<p style="font-size: 0.875rem;">交易策略建議 <strong>⚪ 續抱</strong>，強勢收復季線，守穩 60MA 技術結構防線。9 月營收年增 +97.76% 創高，今日帶量大漲 +6.94% 收在 7,170.00 元，站回 5MA、10MA 與 60MA 季線 (6,880.42 元)，為全投組唯一符合 Stage 2 趨勢範本之多頭標的。三大法人聯手買超，以今日盤中起漲低點與季線 <strong>6,880.00 元</strong> 為技術防守線（停損幅度 -6.34% $\le 8\%$），守穩維持續抱，跌破斷然停損。</p>
+				<div class="kv-row" style="margin-top: 0.75rem;">
+					<div class="kv-item"><span class="kv-label">成本</span><span class="kv-value">7,346.00</span></div>
+					<div class="kv-item"><span class="kv-label">股數</span><span class="kv-value">4</span></div>
+					<div class="kv-item"><span class="kv-label">股價</span><span class="kv-value">7,170.00</span></div>
+					<div class="kv-item"><span class="kv-label">佔比</span><span class="kv-value">5.66%</span></div>
+					<div class="kv-item"><span class="kv-label">損益</span><span class="kv-value neg">-910.00 (-3.08%)</span></div>
+				</div>
+				<div class="sub-block">
+					<div class="sub-block-title">K線、均線與法人籌碼</div>
+					<p style="font-size: 0.875rem;">日 K 呈帶量實體長紅棒，站上 60MA 季線 (6,880.42 元) 與 10MA (7,112.50 元)。全日成交量 3,971 張（為 20 日均量 1.64 倍）。外資買超 263 張、投信買超 245 張、自營商賣超 37 張，三大法人合計買超 471 張。 - <strong>壓力</strong> : 20MA 7,465 元、今日高點 7,375 元。 - <strong>支撐</strong> : 60MA 季線 6,880 元、今日低點 6,900 元。</p>
+				</div>
+			</div>
 
-    <!-- 3533 嘉澤 -->
-    <div class="card">
-      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
-        <div class="card-title" style="margin: 0;">3533 嘉澤</div>
-        <span class="badge badge-sell">🔴 減碼</span>
-      </div>
-      <p style="font-size: 0.875rem;">交易策略建議 <strong>🔴 減碼</strong>，單一持股佔比 27.10% 嚴重超標且違規攤平，次日趁反彈強制減碼 38 股。今日續漲 +3.23% 收在 1,760.00 元，站回 5MA 與季線。然而帳戶今日於虧損中逆勢加碼 12 股，使庫存增至 78 股、市值高達 136,890 元，佔比暴衝至 <strong>27.10%</strong> 嚴重違紀！盤中衝高 1,860 元觸及月線與年線後遭解套賣壓打回留百元上影線。次日開盤市價強制減碼 38 股（持股降至 40 股），收回約 6.69 萬元現金，將佔比壓回 <strong>13.9%</strong> 安全邊界；剩餘 40 股以 5MA 與今日低點 <strong>1,705.00 元</strong> 為最後防線，跌破全數出清。</p>
-      <div class="kv-row" style="margin-top: 0.75rem;">
-        <div class="kv-item"><span class="kv-label">成本</span><span class="kv-value">1,839.00</span></div>
-        <div class="kv-item"><span class="kv-label">股數</span><span class="kv-value">78</span></div>
-        <div class="kv-item"><span class="kv-label">股價</span><span class="kv-value">1,760.00</span></div>
-        <div class="kv-item"><span class="kv-label">佔比</span><span class="kv-value">27.10%</span></div>
-        <div class="kv-item"><span class="kv-label">損益</span><span class="kv-value neg">-7,180.00 (-5.00%)</span></div>
-      </div>
-      <div class="sub-block">
-        <div class="sub-block-title">K線、均線與法人籌碼</div>
-        <p style="font-size: 0.875rem;">衝高測試 20MA (1,812.75 元) 與年線 (1,847.25 元) 留長上影線，收在 1,760 元，守在 5MA (1,706 元) 與 60MA 季線 (1,731 元) 之上。全日成交量 1,619 張。外資買超 100 張、投信買超 32 張、自營商買超 27 張，三大法人連 3 買合計 159 張。 - <strong>壓力</strong> : 10MA 1,780 元、20MA 1,812.75 元。 - <strong>支撐</strong> : 60MA 1,731 元、今日低點 1,710 元、5MA 1,706 元。</p>
-      </div>
-    </div>
+			<!-- 3533 嘉澤 -->
+			<div class="card">
+				<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
+					<div class="card-title" style="margin: 0;">3533 嘉澤</div>
+					<span class="badge badge-sell">🔴 減碼</span>
+				</div>
+				<p style="font-size: 0.875rem;">交易策略建議 <strong>🔴 減碼</strong>，單一持股佔比 27.10% 嚴重超標且違規攤平，次日趁反彈強制減碼 38 股。今日續漲 +3.23% 收在 1,760.00 元，站回 5MA 與季線。然而帳戶今日於虧損中逆勢加碼 12 股，使庫存增至 78 股、市值高達 136,890 元，佔比暴衝至 <strong>27.10%</strong> 嚴重違紀！盤中衝高 1,860 元觸及月線與年線後遭解套賣壓打回留百元上影線。次日開盤市價強制減碼 38 股（持股降至 40 股），收回約 6.69 萬元現金，將佔比壓回 <strong>13.9%</strong> 安全邊界；剩餘 40 股以 5MA 與今日低點 <strong>1,705.00 元</strong> 為最後防線，跌破全數出清。</p>
+				<div class="kv-row" style="margin-top: 0.75rem;">
+					<div class="kv-item"><span class="kv-label">成本</span><span class="kv-value">1,839.00</span></div>
+					<div class="kv-item"><span class="kv-label">股數</span><span class="kv-value">78</span></div>
+					<div class="kv-item"><span class="kv-label">股價</span><span class="kv-value">1,760.00</span></div>
+					<div class="kv-item"><span class="kv-label">佔比</span><span class="kv-value">27.10%</span></div>
+					<div class="kv-item"><span class="kv-label">損益</span><span class="kv-value neg">-7,180.00 (-5.00%)</span></div>
+				</div>
+				<div class="sub-block">
+					<div class="sub-block-title">K線、均線與法人籌碼</div>
+					<p style="font-size: 0.875rem;">衝高測試 20MA (1,812.75 元) 與年線 (1,847.25 元) 留長上影線，收在 1,760 元，守在 5MA (1,706 元) 與 60MA 季線 (1,731 元) 之上。全日成交量 1,619 張。外資買超 100 張、投信買超 32 張、自營商買超 27 張，三大法人連 3 買合計 159 張。 - <strong>壓力</strong> : 10MA 1,780 元、20MA 1,812.75 元。 - <strong>支撐</strong> : 60MA 1,731 元、今日低點 1,710 元、5MA 1,706 元。</p>
+				</div>
+			</div>
 
-    <!-- 3324 雙鴻 -->
-    <div class="card">
-      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
-        <div class="card-title" style="margin: 0;">3324 雙鴻</div>
-        <span class="badge badge-hold">⚪ 續抱</span>
-      </div>
-      <p style="font-size: 0.875rem;">交易策略建議 <strong>⚪ 續抱</strong>，放量跳空站上 5MA，守穩今日跳空缺口結構低點。Blackwell 液冷散熱需求強勁，今日大漲 +7.39% 收在 1,235.00 元，站上 5MA (1,182.00 元)。現價略低於成本 1,246.04 元（浮虧 -2.11%）。以今日起漲低點與 5MA <strong>1,180.00 元</strong> 為技術結構停損點（停損幅度 -5.30% $\le 8\%$），守穩維持續抱，跌破立即市價停損出清 24 股。</p>
-      <div class="kv-row" style="margin-top: 0.75rem;">
-        <div class="kv-item"><span class="kv-label">成本</span><span class="kv-value">1,246.04</span></div>
-        <div class="kv-item"><span class="kv-label">股數</span><span class="kv-value">24</span></div>
-        <div class="kv-item"><span class="kv-label">股價</span><span class="kv-value">1,235.00</span></div>
-        <div class="kv-item"><span class="kv-label">佔比</span><span class="kv-value">5.82%</span></div>
-        <div class="kv-item"><span class="kv-label">損益</span><span class="kv-value neg">-634.00 (-2.11%)</span></div>
-      </div>
-      <div class="sub-block">
-        <div class="sub-block-title">K線、均線與法人籌碼</div>
-        <p style="font-size: 0.875rem;">跳空長紅站上 5MA (1,182.00 元)，但 10MA (1,285.50 元)、60MA (1,330 元) 與 20MA (1,352 元) 仍呈下彎空頭反壓。全日成交量 6,637 張。投信買超 397 張、自營商買超 11 張、外資賣超 168 張。 - <strong>壓力</strong> : 10MA 1,285.50 元、今日高點 1,255 元。 - <strong>支撐</strong> : 5MA 1,182 元、今日低點 1,180 元。</p>
-      </div>
-    </div>
-  </section>
+			<!-- 3324 雙鴻 -->
+			<div class="card">
+				<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
+					<div class="card-title" style="margin: 0;">3324 雙鴻</div>
+					<span class="badge badge-hold">⚪ 續抱</span>
+				</div>
+				<p style="font-size: 0.875rem;">交易策略建議 <strong>⚪ 續抱</strong>，放量跳空站上 5MA，守穩今日跳空缺口結構低點。Blackwell 液冷散熱需求強勁，今日大漲 +7.39% 收在 1,235.00 元，站上 5MA (1,182.00 元)。現價略低於成本 1,246.04 元（浮虧 -2.11%）。以今日起漲低點與 5MA <strong>1,180.00 元</strong> 為技術結構停損點（停損幅度 -5.30% $\le 8\%$），守穩維持續抱，跌破立即市價停損出清 24 股。</p>
+				<div class="kv-row" style="margin-top: 0.75rem;">
+					<div class="kv-item"><span class="kv-label">成本</span><span class="kv-value">1,246.04</span></div>
+					<div class="kv-item"><span class="kv-label">股數</span><span class="kv-value">24</span></div>
+					<div class="kv-item"><span class="kv-label">股價</span><span class="kv-value">1,235.00</span></div>
+					<div class="kv-item"><span class="kv-label">佔比</span><span class="kv-value">5.82%</span></div>
+					<div class="kv-item"><span class="kv-label">損益</span><span class="kv-value neg">-634.00 (-2.11%)</span></div>
+				</div>
+				<div class="sub-block">
+					<div class="sub-block-title">K線、均線與法人籌碼</div>
+					<p style="font-size: 0.875rem;">跳空長紅站上 5MA (1,182.00 元)，但 10MA (1,285.50 元)、60MA (1,330 元) 與 20MA (1,352 元) 仍呈下彎空頭反壓。全日成交量 6,637 張。投信買超 397 張、自營商買超 11 張、外資賣超 168 張。 - <strong>壓力</strong> : 10MA 1,285.50 元、今日高點 1,255 元。 - <strong>支撐</strong> : 5MA 1,182 元、今日低點 1,180 元。</p>
+				</div>
+			</div>
+		</section>
 
-  <!-- 分析指定個股 -->
-  <section class="section">
-    <h2 class="section-title">分析指定個股</h2>
-    <div class="card">
-      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
-        <div class="card-title" style="margin: 0;">2327 國巨*</div>
-        <span class="badge badge-hold">⚪ 觀望</span>
-      </div>
-      <p style="font-size: 0.875rem;">交易策略建議 <strong>⚪ 觀望</strong>，隨大盤反抽收復 5MA 收 402.00 元 (+2.55%)，但上方跳空缺口 404.50 元與下彎月季線反壓沉重，暫不開倉。</p>
-    </div>
-    <div class="card">
-      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
-        <div class="card-title" style="margin: 0;">2408 南亞科</div>
-        <span class="badge badge-hold">⚪ 觀望</span>
-      </div>
-      <p style="font-size: 0.875rem;">交易策略建議 <strong>⚪ 觀望</strong>，外資大買 7,281 張推升收 383.00 元 (+3.51%)，惟留墓碑長上影線受制於 10MA (413 元) 與下彎 20MA，暫不追高。</p>
-    </div>
-    <div class="card">
-      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
-        <div class="card-title" style="margin: 0;">2409 友達</div>
-        <span class="badge badge-hold">⚪ 觀望</span>
-      </div>
-      <p style="font-size: 0.875rem;">交易策略建議 <strong>⚪ 觀望</strong>，低檔弱勢反抽收 27.55 元 (+1.29%)，均線全面空頭排列且第四季缺乏催化劑。</p>
-    </div>
-    <div class="card">
-      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
-        <div class="card-title" style="margin: 0;">3529 力旺</div>
-        <span class="badge badge-hold">⚪ 觀望</span>
-      </div>
-      <p style="font-size: 0.875rem;">交易策略建議 <strong>⚪ 觀望</strong>，10 月營收創高帶動續彈站上 5MA 收 2,240.00 元 (+3.46%)，但上方 20MA 生命線下彎，等待打底完成。</p>
-    </div>
-    <div class="card">
-      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
-        <div class="card-title" style="margin: 0;">3661 世芯-KY</div>
-        <span class="badge badge-hold">⚪ 觀望</span>
-      </div>
-      <p style="font-size: 0.875rem;">交易策略建議 <strong>⚪ 觀望</strong>，受創意大漲帶動重返 3,000 元大關收 3,055.00 元 (+3.91%)，靜待收復 20MA 生命線。</p>
-    </div>
-    <div class="card">
-      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
-        <div class="card-title" style="margin: 0;">4960 誠美材</div>
-        <span class="badge badge-hold">⚪ 觀望</span>
-      </div>
-      <p style="font-size: 0.875rem;">交易策略建議 <strong>⚪ 觀望</strong>，爆量 3.1 萬張開高走低留長上影線黑 K 跌破 5MA 收 29.55 元 (-1.17%)，財報虧損，嚴禁介入！</p>
-    </div>
-    <div class="card">
-      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
-        <div class="card-title" style="margin: 0;">5425 台半</div>
-        <span class="badge badge-hold">⚪ 觀望</span>
-      </div>
-      <p style="font-size: 0.875rem;">交易策略建議 <strong>⚪ 觀望</strong>，跳空續揚 +4.07% 收 79.20 元收復年線與 5MA，但盤中碰觸 10MA 留上影線且 20MA 下彎，暫不追高。</p>
-    </div>
-    <div class="card">
-      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
-        <div class="card-title" style="margin: 0;">5483 中美晶</div>
-        <span class="badge badge-hold">⚪ 觀望</span>
-      </div>
-      <p style="font-size: 0.875rem;">交易策略建議 <strong>⚪ 觀望</strong>，隨子公司環球晶大漲連動反抽收 153.50 元 (+3.72%)，惟中長期均線反壓仍重。</p>
-    </div>
-    <div class="card">
-      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
-        <div class="card-title" style="margin: 0;">6239 力成</div>
-        <span class="badge badge-hold">⚪ 觀望</span>
-      </div>
-      <p style="font-size: 0.875rem;">交易策略建議 <strong>⚪ 觀望</strong>，衝高觸及 240 元遭外資倒貨 1,979 張留長上影線收 230.00 元 (+2.91%)，20MA 陡峭下彎，暫不追高。</p>
-    </div>
-    <div class="card">
-      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
-        <div class="card-title" style="margin: 0;">6770 力積電</div>
-        <span class="badge badge-hold">⚪ 觀望</span>
-      </div>
-      <p style="font-size: 0.875rem;">交易策略建議 <strong>⚪ 觀望</strong>，爆量 13.4 萬張留長上影線黑 K 收 59.20 元 (+1.89%)，外資與自營商狂倒逾 1.1 萬張，嚴禁追高接刀！</p>
-    </div>
-    <div class="card">
-      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
-        <div class="card-title" style="margin: 0;">8086 宏捷科</div>
-        <span class="badge badge-hold">⚪ 觀望</span>
-      </div>
-      <p style="font-size: 0.875rem;">交易策略建議 <strong>⚪ 觀望</strong>，反彈站上 5MA 收 99.90 元 (+5.60%)，但量能急縮且距離年線與下彎 20MA 仍遠，動能偏弱。</p>
-    </div>
-  </section>
+		<!-- 分析指定個股 -->
+		<section class="section">
+			<h2 class="section-title">分析指定個股</h2>
+			<div class="card">
+				<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
+					<div class="card-title" style="margin: 0;">2327 國巨*</div>
+					<span class="badge badge-hold">⚪ 觀望</span>
+				</div>
+				<p style="font-size: 0.875rem;">交易策略建議 <strong>⚪ 觀望</strong>，隨大盤反抽收復 5MA 收 402.00 元 (+2.55%)，但上方跳空缺口 404.50 元與下彎月季線反壓沉重，暫不開倉。</p>
+			</div>
+			<div class="card">
+				<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
+					<div class="card-title" style="margin: 0;">2408 南亞科</div>
+					<span class="badge badge-hold">⚪ 觀望</span>
+				</div>
+				<p style="font-size: 0.875rem;">交易策略建議 <strong>⚪ 觀望</strong>，外資大買 7,281 張推升收 383.00 元 (+3.51%)，惟留墓碑長上影線受制於 10MA (413 元) 與下彎 20MA，暫不追高。</p>
+			</div>
+			<div class="card">
+				<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
+					<div class="card-title" style="margin: 0;">2409 友達</div>
+					<span class="badge badge-hold">⚪ 觀望</span>
+				</div>
+				<p style="font-size: 0.875rem;">交易策略建議 <strong>⚪ 觀望</strong>，低檔弱勢反抽收 27.55 元 (+1.29%)，均線全面空頭排列且第四季缺乏催化劑。</p>
+			</div>
+			<div class="card">
+				<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
+					<div class="card-title" style="margin: 0;">3529 力旺</div>
+					<span class="badge badge-hold">⚪ 觀望</span>
+				</div>
+				<p style="font-size: 0.875rem;">交易策略建議 <strong>⚪ 觀望</strong>，10 月營收創高帶動續彈站上 5MA 收 2,240.00 元 (+3.46%)，但上方 20MA 生命線下彎，等待打底完成。</p>
+			</div>
+			<div class="card">
+				<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
+					<div class="card-title" style="margin: 0;">3661 世芯-KY</div>
+					<span class="badge badge-hold">⚪ 觀望</span>
+				</div>
+				<p style="font-size: 0.875rem;">交易策略建議 <strong>⚪ 觀望</strong>，受創意大漲帶動重返 3,000 元大關收 3,055.00 元 (+3.91%)，靜待收復 20MA 生命線。</p>
+			</div>
+			<div class="card">
+				<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
+					<div class="card-title" style="margin: 0;">4960 誠美材</div>
+					<span class="badge badge-hold">⚪ 觀望</span>
+				</div>
+				<p style="font-size: 0.875rem;">交易策略建議 <strong>⚪ 觀望</strong>，爆量 3.1 萬張開高走低留長上影線黑 K 跌破 5MA 收 29.55 元 (-1.17%)，財報虧損，嚴禁介入！</p>
+			</div>
+			<div class="card">
+				<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
+					<div class="card-title" style="margin: 0;">5425 台半</div>
+					<span class="badge badge-hold">⚪ 觀望</span>
+				</div>
+				<p style="font-size: 0.875rem;">交易策略建議 <strong>⚪ 觀望</strong>，跳空續揚 +4.07% 收 79.20 元收復年線與 5MA，但盤中碰觸 10MA 留上影線且 20MA 下彎，暫不追高。</p>
+			</div>
+			<div class="card">
+				<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
+					<div class="card-title" style="margin: 0;">5483 中美晶</div>
+					<span class="badge badge-hold">⚪ 觀望</span>
+				</div>
+				<p style="font-size: 0.875rem;">交易策略建議 <strong>⚪ 觀望</strong>，隨子公司環球晶大漲連動反抽收 153.50 元 (+3.72%)，惟中長期均線反壓仍重。</p>
+			</div>
+			<div class="card">
+				<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
+					<div class="card-title" style="margin: 0;">6239 力成</div>
+					<span class="badge badge-hold">⚪ 觀望</span>
+				</div>
+				<p style="font-size: 0.875rem;">交易策略建議 <strong>⚪ 觀望</strong>，衝高觸及 240 元遭外資倒貨 1,979 張留長上影線收 230.00 元 (+2.91%)，20MA 陡峭下彎，暫不追高。</p>
+			</div>
+			<div class="card">
+				<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
+					<div class="card-title" style="margin: 0;">6770 力積電</div>
+					<span class="badge badge-hold">⚪ 觀望</span>
+				</div>
+				<p style="font-size: 0.875rem;">交易策略建議 <strong>⚪ 觀望</strong>，爆量 13.4 萬張留長上影線黑 K 收 59.20 元 (+1.89%)，外資與自營商狂倒逾 1.1 萬張，嚴禁追高接刀！</p>
+			</div>
+			<div class="card">
+				<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
+					<div class="card-title" style="margin: 0;">8086 宏捷科</div>
+					<span class="badge badge-hold">⚪ 觀望</span>
+				</div>
+				<p style="font-size: 0.875rem;">交易策略建議 <strong>⚪ 觀望</strong>，反彈站上 5MA 收 99.90 元 (+5.60%)，但量能急縮且距離年線與下彎 20MA 仍遠，動能偏弱。</p>
+			</div>
+		</section>
 
-  <!-- 風控審查報告 -->
-  <section class="section">
-    <h2 class="section-title">風控審查報告</h2>
-    <div class="sub-block">
-      <div class="sub-block-title">整體資金與市場風險把關</div>
-      <p style="font-size: 0.875rem;">- <strong>大盤風險評估</strong>：加權指數雖連兩日強彈逾 3,010 點收復 5MA，但 20MA 生命線 (45,396 點) 陡峭下彎，波浪結構仍屬「頭低、底低」之空頭反彈波；外資現貨連 9 賣、期貨淨空單仍高達 90,520 口。依朱家泓空頭市場資金控管準則，整體股票部位應嚴格控制在 <strong>30% 以下</strong>，現金水位應保持在 <strong>70% 以上</strong>。<br>- <strong>資金集中度與違規攤平嚴重警告</strong>：<br>1. <strong>單一持股嚴重超標與違規向下攤平</strong>：帳戶今日在 3533 嘉澤虧損狀態下逆勢買進 12 股向下攤平，導致嘉澤總持股達 78 股（市值 136,890 元），單一持股佔總資產比重飆升至 <strong>27.10%</strong>，嚴重突破 20% 硬性上限！<br>2. <strong>電子產業集中度過高</strong>：台光電 (4.28%) + 創意 (5.66%) + 嘉澤 (27.10%) + 雙鴻 (5.82%) 四檔合計佔總資產高達 <strong>42.86%</strong>，突破 40% 上限，存在劇烈 Beta 共振回撤風險。<br>3. <strong>強制風控處置要求</strong>：次日開盤必須無條件立即執行 <strong>3533 嘉澤減碼 38 股</strong>（收回約 66,880 元現金）及 <strong>2887 台新新光金出清 40 股</strong>（收回約 1,568 元現金）。執行後，總股票市值降至約 <strong>149,815 元（佔總資產 29.66% &le; 30%）</strong>，現金儲備拉升至 <strong>70.34%</strong>，電子產業集中度降至 29.66%，徹底解除風控警報！</p>
-    </div>
-    <div class="card">
-      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem;">
-        <div class="card-title" style="margin: 0;">3533 嘉澤</div>
-        <span class="status-approved">✅ 核准</span>
-      </div>
-      <div style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 0.5rem;">原建議：🔴 減碼 (強制減碼 38 股，持股由 78 股降至 40 股)</div>
-      <p style="font-size: 0.875rem;"><strong>風控審核意見</strong>：<br>- <strong>風險點</strong>：今日違規於虧損中加碼 12 股，單檔佔比達 27.10% 嚴重超標；盤中衝高 1,860 元遇 20MA 與年線反壓留百元長上影線，套牢賣壓沉重。<br>- <strong>防護機制要求</strong>：次日開盤必須無條件市價執行減碼 38 股，收回約 6.69 萬元現金，將佔比壓回 13.9% 安全水位。<br>- <strong>強制出場紀律</strong>：剩餘 40 股以 5MA 與今日低點 <strong>1,705.00 元</strong> 為絕對停損防守線，盤中一旦跌破無條件出清，嚴禁凹單！</p>
-    </div>
-    <div class="card">
-      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem;">
-        <div class="card-title" style="margin: 0;">2887 台新新光金</div>
-        <span class="status-approved">✅ 核准</span>
-      </div>
-      <div style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 0.5rem;">原建議：🔴 撤資 (出清 100% 部位，減碼 40 股)</div>
-      <p style="font-size: 0.875rem;"><strong>風控審核意見</strong>：<br>- <strong>風險點</strong>：淨虧損達 <strong>-8.53%</strong>，直接擊穿 8% 最大停損硬性上限；均線全面空頭排列，且投信翻臉大賣 2,315 張。<br>- <strong>防護機制要求</strong>：全數核准出清。次日開盤市價出清 40 股，全面撤資平倉收回現金。</p>
-    </div>
-    <div class="card">
-      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem;">
-        <div class="card-title" style="margin: 0;">3443 創意、2383 台光電、3324 雙鴻</div>
-        <span class="status-cond">⚠️ 有條件核准</span>
-      </div>
-      <div style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 0.5rem;">原建議：⚪ 續抱 (守穩技術防線)</div>
-      <p style="font-size: 0.875rem;"><strong>風控審核意見</strong>：<br>- <strong>風險點</strong>：今日大盤處於 Risk-Off 逆勢開立新倉屬違規行為，但在既成事實下，創意收復季線、台光電與雙鴻收復 5MA，短線具備防守支撐。<br>- <strong>防護機制要求</strong>：嚴格設定條件單：台光電保本線 <strong>4,325.00 元</strong> / 停損線 <strong>4,160.00 元</strong>；創意停損線 <strong>6,880.00 元</strong>；雙鴻停損線 <strong>1,180.00 元</strong>。一旦盤中觸及立即市價平倉，嚴禁加碼！</p>
-    </div>
-    <div class="card">
-      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem;">
-        <div class="card-title" style="margin: 0;">指定名單個股（11 檔指定個股）</div>
-        <span class="status-approved">✅ 核准</span>
-      </div>
-      <div style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 0.5rem;">原建議：⚪ 觀望 (全數不開倉，維持 0 股)</div>
-      <p style="font-size: 0.875rem;"><strong>風控審核意見</strong>：大盤空頭反彈受制於 10MA，均線下彎，核准全數維持「⚪ 觀望」評級，委託買進 0 股，保留 100% 流動性。</p>
-    </div>
-  </section>
-</main>
+		<!-- 風控審查報告 -->
+		<section class="section">
+			<h2 class="section-title">風控審查報告</h2>
+			<div class="sub-block">
+				<div class="sub-block-title">整體資金與市場風險把關</div>
+				<p style="font-size: 0.875rem;">- <strong>大盤風險評估</strong>：加權指數雖連兩日強彈逾 3,010 點收復 5MA，但 20MA 生命線 (45,396 點) 陡峭下彎，波浪結構仍屬「頭低、底低」之空頭反彈波；外資現貨連 9 賣、期貨淨空單仍高達 90,520 口。依朱家泓空頭市場資金控管準則，整體股票部位應嚴格控制在 <strong>30% 以下</strong>，現金水位應保持在 <strong>70% 以上</strong>。<br>- <strong>資金集中度與違規攤平嚴重警告</strong>：<br>1. <strong>單一持股嚴重超標與違規向下攤平</strong>：帳戶今日在 3533 嘉澤虧損狀態下逆勢買進 12 股向下攤平，導致嘉澤總持股達 78 股（市值 136,890 元），單一持股佔總資產比重飆升至 <strong>27.10%</strong>，嚴重突破 20% 硬性上限！<br>2. <strong>電子產業集中度過高</strong>：台光電 (4.28%) + 創意 (5.66%) + 嘉澤 (27.10%) + 雙鴻 (5.82%) 四檔合計佔總資產高達 <strong>42.86%</strong>，突破 40% 上限，存在劇烈 Beta 共振回撤風險。<br>3. <strong>強制風控處置要求</strong>：次日開盤必須無條件立即執行 <strong>3533 嘉澤減碼 38 股</strong>（收回約 66,880 元現金）及 <strong>2887 台新新光金出清 40 股</strong>（收回約 1,568 元現金）。執行後，總股票市值降至約 <strong>149,815 元（佔總資產 29.66% &le; 30%）</strong>，現金儲備拉升至 <strong>70.34%</strong>，電子產業集中度降至 29.66%，徹底解除風控警報！</p>
+			</div>
+			<div class="card">
+				<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem;">
+					<div class="card-title" style="margin: 0;">3533 嘉澤</div>
+					<span class="status-approved">✅ 核准</span>
+				</div>
+				<div style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 0.5rem;">原建議：🔴 減碼 (強制減碼 38 股，持股由 78 股降至 40 股)</div>
+				<p style="font-size: 0.875rem;"><strong>風控審核意見</strong>：<br>- <strong>風險點</strong>：今日違規於虧損中加碼 12 股，單檔佔比達 27.10% 嚴重超標；盤中衝高 1,860 元遇 20MA 與年線反壓留百元長上影線，套牢賣壓沉重。<br>- <strong>防護機制要求</strong>：次日開盤必須無條件市價執行減碼 38 股，收回約 6.69 萬元現金，將佔比壓回 13.9% 安全水位。<br>- <strong>強制出場紀律</strong>：剩餘 40 股以 5MA 與今日低點 <strong>1,705.00 元</strong> 為絕對停損防守線，盤中一旦跌破無條件出清，嚴禁凹單！</p>
+			</div>
+			<div class="card">
+				<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem;">
+					<div class="card-title" style="margin: 0;">2887 台新新光金</div>
+					<span class="status-approved">✅ 核准</span>
+				</div>
+				<div style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 0.5rem;">原建議：🔴 撤資 (出清 100% 部位，減碼 40 股)</div>
+				<p style="font-size: 0.875rem;"><strong>風控審核意見</strong>：<br>- <strong>風險點</strong>：淨虧損達 <strong>-8.53%</strong>，直接擊穿 8% 最大停損硬性上限；均線全面空頭排列，且投信翻臉大賣 2,315 張。<br>- <strong>防護機制要求</strong>：全數核准出清。次日開盤市價出清 40 股，全面撤資平倉收回現金。</p>
+			</div>
+			<div class="card">
+				<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem;">
+					<div class="card-title" style="margin: 0;">3443 創意、2383 台光電、3324 雙鴻</div>
+					<span class="status-cond">⚠️ 有條件核准</span>
+				</div>
+				<div style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 0.5rem;">原建議：⚪ 續抱 (守穩技術防線)</div>
+				<p style="font-size: 0.875rem;"><strong>風控審核意見</strong>：<br>- <strong>風險點</strong>：今日大盤處於 Risk-Off 逆勢開立新倉屬違規行為，但在既成事實下，創意收復季線、台光電與雙鴻收復 5MA，短線具備防守支撐。<br>- <strong>防護機制要求</strong>：嚴格設定條件單：台光電保本線 <strong>4,325.00 元</strong> / 停損線 <strong>4,160.00 元</strong>；創意停損線 <strong>6,880.00 元</strong>；雙鴻停損線 <strong>1,180.00 元</strong>。一旦盤中觸及立即市價平倉，嚴禁加碼！</p>
+			</div>
+			<div class="card">
+				<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem;">
+					<div class="card-title" style="margin: 0;">指定名單個股（11 檔指定個股）</div>
+					<span class="status-approved">✅ 核准</span>
+				</div>
+				<div style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 0.5rem;">原建議：⚪ 觀望 (全數不開倉，維持 0 股)</div>
+				<p style="font-size: 0.875rem;"><strong>風控審核意見</strong>：大盤空頭反彈受制於 10MA，均線下彎，核准全數維持「⚪ 觀望」評級，委託買進 0 股，保留 100% 流動性。</p>
+			</div>
+		</section>
+	</main>
 
-<button class="go-top-btn" id="goTopBtn" aria-label="回到頁首">
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M18 15l-6-6-6 6"/>
-  </svg>
-</button>
+	<button class="go-top-btn" id="goTopBtn" aria-label="回到頁首">
+		<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+			<path d="M18 15l-6-6-6 6" />
+		</svg>
+	</button>
 
-<footer class="site-footer">
-  STARCK Research &mdash; 僅供個人參考使用
-</footer>
+	<footer class="site-footer">
+		STARCK Research &mdash; 僅供個人參考使用
+	</footer>
 
-<script src="js/main.js"></script>
+	<script src="js/main.js"></script>
 </body>
+
 </html>
