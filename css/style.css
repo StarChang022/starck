@@ -682,6 +682,16 @@ strong {
 	font-weight: 700;
 }
 
+/* 當前收盤價標示 (桌機版在估值分類右側，行動版在卡片標題列右側) */
+.val-current-mark {
+	display: inline-flex;
+	align-items: center;
+	margin-left: 0.35rem;
+	font-size: 0.95rem;
+	line-height: 1;
+	vertical-align: middle;
+}
+
 /* Valuation table column widths on desktop */
 @media (min-width: 681px) {
 	.val-table {
@@ -784,6 +794,12 @@ strong {
 		display: flex;
 		align-items: center;
 		gap: 0.35rem;
+	}
+
+	.val-current-mark {
+		order: 2;
+		margin-left: auto;
+		margin-right: 0;
 	}
 
 	/* 2. 目標價格區間 */
