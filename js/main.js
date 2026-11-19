@@ -44,4 +44,26 @@
 		});
 	}
 
+	// Sentiment tabs switching (intelligence.html)
+	var sentimentTabs = document.querySelectorAll('.sentiment-tab');
+	var sentimentPanels = document.querySelectorAll('.sentiment-panel');
+	if (sentimentTabs.length && sentimentPanels.length) {
+		sentimentTabs.forEach(function (tab) {
+			tab.addEventListener('click', function () {
+				var targetId = tab.getAttribute('data-target');
+				sentimentTabs.forEach(function (t) {
+					t.classList.remove('active');
+				});
+				sentimentPanels.forEach(function (p) {
+					p.style.display = 'none';
+				});
+				tab.classList.add('active');
+				var targetPanel = document.getElementById(targetId);
+				if (targetPanel) {
+					targetPanel.style.display = 'block';
+				}
+			});
+		});
+	}
+
 })();

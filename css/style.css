@@ -470,6 +470,49 @@ strong {
 	color: #ffffff;
 }
 
+/* Sentiment tab buttons (Hug layout) */
+.sentiment-tabs {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.45rem;
+	margin-bottom: 1.25rem;
+	width: fit-content;
+	max-width: 100%;
+}
+
+.sentiment-tab {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: auto;
+	flex: 0 0 auto;
+	cursor: pointer;
+	border: 1px solid var(--color-border);
+	background: var(--color-tag-bg);
+	color: var(--color-text-muted);
+	font-family: var(--font);
+	font-size: 0.8rem;
+	font-weight: 600;
+	padding: 0.35rem 0.8rem;
+	border-radius: 99px;
+	user-select: none;
+	transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+	white-space: nowrap;
+	outline: none;
+}
+
+.sentiment-tab:hover {
+	background: #e5e5e5;
+	color: var(--color-text);
+	border-color: #ccc;
+}
+
+.sentiment-tab.active {
+	background: var(--color-text);
+	color: #ffffff;
+	border-color: var(--color-text);
+}
+
 /* Value page blocks */
 .value-block {
 	margin-bottom: 0;
