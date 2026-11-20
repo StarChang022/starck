@@ -42,110 +42,65 @@
 
 	<main class="page-wrapper">
 		<h1>John-Larry-Kelly</h1>
-		<span class="report-date">報告撰寫日期：2026 年 11 月 19 日</span>
+		<span class="report-date">報告撰寫日期：2026 年 11 月 20 日</span>
 
 		<!-- 台股大盤趨勢 -->
 		<section class="section">
 			<h2 class="section-title">台股大盤趨勢</h2>
 
 			<div class="callout" style="margin-bottom: 1.5rem;">
-				<p><strong>總體環境裁決：🔴 Risk-Off（逆風防禦期）</strong> &mdash; 大盤多空真實計數 <strong>S<sub>mkt</sub> = -5 &lt; 0</strong>，環境調節乘數 <strong>&kappa;<sub>regime</sub> = 0.00</strong>，允許最大總在險資金 <strong>H<sub>max</sub> = 0.0%</strong>；全面封鎖所有新買單與加碼（<code>ERR_MARKET_REGIME_RISK_OFF</code>，次日開新倉 <strong>N<sub>shares</sub> = 0</strong>）。</p>
+				<p><strong>總體環境裁決：🔴 Risk-Off（極端逆風與系統性空頭區）</strong> &mdash; 大盤環境計數 <strong>S<sub>mkt</sub> = -5 &lt; 0</strong>（計數理論下限），環境調節乘數 <strong>&kappa;<sub>regime</sub> = 0.00</strong>，帳戶總在險資金上限 <strong>H<sub>max</sub> = 0.0%</strong>；同時帳戶淨值回撤 <strong>DD<sub>t</sub> = 12.65% &ge; 12.0%</strong>（且連續 2 筆停損），正式觸發回撤斷路器 <strong>&kappa;<sub>dd</sub> = 0.00</strong>！全面封鎖所有新買單與加碼（<code>ERR_MARKET_REGIME_RISK_OFF</code>、<code>ERR_DRAWDOWN_CIRCUIT_BREAKER</code>，次日開新倉 <strong>N<sub>shares</sub> = 0</strong>）。</p>
 			</div>
 
 			<div class="sub-block">
-				<div class="sub-block-title">條件機率空間（大盤多空計數模型）</div>
-				<p style="font-size: 0.875rem;">依據《Kelly-Criterion.md》第 1 章與第 2.1 節大盤環境計數模型，以加權指數為主、櫃買指數為輔，代入 2026 年 11 月 19 日收盤數據計算真實計數 S<sub>mkt</sub> &isin; [-5, +6]：</p>
+				<div class="sub-block-title">條件機率空間（大盤環境計數模型 S<sub>mkt</sub>）</div>
+				<p style="font-size: 0.875rem;">依據《Kelly-Criterion.md》第 1 章與第 2.1 節封閉型算式，以加權指數為主、櫃買指數為輔，代入 2026 年 11 月 20 日收盤數據精確計算 S<sub>mkt</sub> &isin; [-5, +6]：</p>
 				<ol style="font-size: 0.875rem; line-height: 1.8; margin-top: 0.5rem; padding-left: 1.25rem;">
-					<li><strong>均線位階分（m<sub>1</sub> &isin; {-2, 0, +2}）</strong>：I<sub>t</sub> = 38,426.89 &lt; MA<sub>20,t</sub> = 43,262.29 且 I<sub>t</sub> &lt; MA<sub>60,t</sub> = 45,864.10 &rArr; <strong>m<sub>1</sub> = -2</strong></li>
-					<li><strong>均線斜率動能分（m<sub>2</sub> &isin; {-1, 0, +1, +2}）</strong>：MA<sub>20,t</sub> (43,262.29) &lt; MA<sub>20,t-1</sub> (43,655.60) 且 MA<sub>60,t</sub> (45,864.10) &lt; MA<sub>60,t-1</sub> (45,972.55) 雙均線加速下彎 &rArr; <strong>m<sub>2</sub> = -1</strong></li>
-					<li><strong>年線長牛保護分（m<sub>3</sub> &isin; {-1, +1}）</strong>：I<sub>t</sub> = 38,426.89 &lt; MA<sub>240,t</sub> = 39,368.24（帶量長黑實質跌破 240MA 年線生命線）&rArr; <strong>m<sub>3</sub> = -1</strong></li>
-					<li><strong>市場寬度（櫃買共振）與法人流向（m<sub>4</sub> &isin; {-1, 0, +1}）</strong>：近 3 日集中市場三大法人累計買賣超 (-461.03) + (-632.07) + (-576.11) = <strong>-1,669.21 億元 &lt; 0</strong>（I = 0），櫃買指數 I<sub>TPEx,t</sub> = 285.33 &lt; MA<sub>20,TPEx,t</sub> = 343.80（I = 0）&rArr; m<sub>4</sub> = 0 + 0 - 1 = <strong>-1</strong></li>
-					<li><strong>大盤累計計數總分</strong>：<strong>S<sub>mkt</sub> = (-2) + (-1) + (-1) + (-1) = -5 &lt; 0</strong> &rArr; 🔴 <strong>Risk-Off</strong>（&kappa;<sub>regime</sub> = 0.00，H<sub>max</sub> = 0.0%）</li>
+					<li><strong>均線位階分（m<sub>1</sub> &isin; {-2, 0, +2}）</strong>：I<sub>t</sub> = 36,033.29 &lt; MA<sub>20,t</sub> = 42,719.57 且 I<sub>t</sub> &lt; MA<sub>60,t</sub> = 45,710.92 &rArr; <strong>m<sub>1</sub> = -2 分</strong></li>
+					<li><strong>均線斜率動能分（m<sub>2</sub> &isin; {-1, 0, +1, +2}）</strong>：MA<sub>20,t</sub> (42,719.57) &lt; MA<sub>20,t-1</sub> (43,262.29) 且 MA<sub>60,t</sub> (45,710.92) &lt; MA<sub>60,t-1</sub> (45,864.10)，雙均線加速下彎（0 + 0 - 1）&rArr; <strong>m<sub>2</sub> = -1 分</strong></li>
+					<li><strong>年線長牛保護分（m<sub>3</sub> &isin; {-1, +1}）</strong>：I<sub>t</sub> = 36,033.29 &lt; MA<sub>240,t</sub> = 39,408.23（連 2 日實質跌破 240MA 年線，長牛保護失效）&rArr; <strong>m<sub>3</sub> = -1 分</strong></li>
+					<li><strong>市場寬度（櫃買共振）與法人資金流向分（m<sub>4</sub> &isin; {-1, 0, +1}）</strong>：近 3 日三大法人合計賣超 &sum; F<sub>I,t-j</sub> = -159,624,914 千元 &lt; 0，且櫃買指數 I<sub>TPEx,t</sub> = 263.31 &lt; MA<sub>20,TPEx,t</sub> = 337.80（0 + 0 - 1）&rArr; <strong>m<sub>4</sub> = -1 分</strong></li>
+					<li><strong>大盤累計計數總分</strong>：<strong>S<sub>mkt</sub> = (-2) + (-1) + (-1) + (-1) = -5 &lt; 0</strong> &rArr; 🔴 <strong>Risk-Off（&kappa;<sub>regime</sub> = 0.00，H<sub>max</sub> = 0.0%）</strong></li>
 				</ol>
-				<div class="table-scroll" style="margin-top: 0.75rem;">
-					<table class="data-table">
-						<thead>
-							<tr>
-								<th>市場環境分區</th>
-								<th>嚴格定量判定閾值</th>
-								<th class="num">今日計算結果</th>
-								<th class="num">環境調節乘數 (&kappa;<sub>regime</sub>)</th>
-								<th class="num">允許最大總在險資金 (H<sub>max</sub>)</th>
-								<th>條件機率與期望值環境定義</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>🟢 Risk-On（順風攻擊期）</td>
-								<td>S<sub>mkt</sub> &ge; +3</td>
-								<td class="num">未達 (-5)</td>
-								<td class="num">1.00</td>
-								<td class="num">6.0%</td>
-								<td>允許滿額執行分數凱利配置與順勢金字塔加碼。</td>
-							</tr>
-							<tr>
-								<td>🟡 Neutral（震盪整固期）</td>
-								<td>0 &le; S<sub>mkt</sub> &le; +2</td>
-								<td class="num">未達 (-5)</td>
-								<td class="num">0.50</td>
-								<td class="num">3.0%</td>
-								<td>風險預算強制砍半，僅限頂尖基本面＋VCP 領頭股。</td>
-							</tr>
-							<tr>
-								<td><strong>🔴 Risk-Off（逆風防禦期）</strong></td>
-								<td><strong>S<sub>mkt</sub> &lt; 0</strong></td>
-								<td class="num neg"><strong>命中 (S<sub>mkt</sub> = -5)</strong></td>
-								<td class="num neg"><strong>0.00</strong></td>
-								<td class="num neg"><strong>0.0%</strong></td>
-								<td><strong>全面封鎖新買單（<code>ERR_MARKET_REGIME_RISK_OFF</code>），嚴控總在險資金 H<sub>open</sub>。</strong></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
 			</div>
 
 			<div class="sub-block">
-				<div class="sub-block-title">指數結構</div>
+				<div class="sub-block-title">指數結構與連續時間凱利評估</div>
 				<div class="table-scroll">
 					<table class="data-table">
 						<thead>
 							<tr>
 								<th>指數名稱</th>
-								<th class="num">11/19 收盤</th>
+								<th class="num">11/20 收盤</th>
 								<th class="num">漲跌 (幅度)</th>
 								<th class="num">成交金額</th>
-								<th>關鍵均線結構</th>
+								<th>均線排列與位階評估</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
 								<td class="stock">加權指數 TWSE</td>
-								<td class="num neg">38,426.89</td>
-								<td class="num neg">-1,768.02 (-4.40%)</td>
-								<td class="num">9,310 億元</td>
-								<td>帶量長黑實質擊穿年線 240MA (39,368.24)，遠低於下彎 20MA (43,262) 與 60MA (45,864)</td>
+								<td class="num neg">36,033.29</td>
+								<td class="num neg">-2,393.60 (-6.23%)</td>
+								<td class="num">9,323 億元</td>
+								<td>5MA (39,157.46) &lt; 240MA (39,408.23) &lt; 10MA (41,118.50) &lt; 20MA (42,719.57) &lt; 120MA (45,281.24) &lt; 60MA (45,710.92)；連 2 日破年線</td>
 							</tr>
 							<tr>
 								<td class="stock">櫃買指數 TPEx</td>
-								<td class="num neg">285.33</td>
-								<td class="num neg">-22.22 (-7.22%)</td>
-								<td class="num">1,845 億元</td>
-								<td>重摔破底大跌逾 7%，20MA (343.80) 與 60MA (383.50) 均線斜率向下加速發散</td>
+								<td class="num neg">263.31</td>
+								<td class="num neg">-22.02 (-7.72%)</td>
+								<td class="num">860 億元</td>
+								<td>5MA (296.38) &lt; 10MA (315.91) &lt; 20MA (337.80) &lt; 240MA (358.53) &lt; 60MA (384.22) &lt; 120MA (396.01)；逾 365 家跌停</td>
 							</tr>
 						</tbody>
 					</table>
 				</div>
-				<p style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: 0.5rem;">Merton 連續時間凱利評估：加權指數失守年線，市場年化波動率變異數 &sigma;<sup>2</sup> 劇烈飆升，無風險利率 r<sub>f</sub> 報 5.12%。大盤整體預期超額報酬 &mu; - r<sub>f</sub> 為顯著負值，最佳理論總曝險部位 f* &asymp; (&mu; - r<sub>f</sub>) / &sigma;<sup>2</sup> 強制歸零（0.00%）。</p>
+				<p style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: 0.5rem;">連續時間凱利公式 f* &asymp; (&mu; - r<sub>f</sub>) / &sigma;<sup>2</sup>：單週狂瀉 7,641.83 點 (-17.50%)、VIX 處於 22.83 點高壓區、美 10 年期公債殖利率報 5.04%（r<sub>f</sub> 高懸）。在波動率倍增導致變異數 &sigma;<sup>2</sup> 放大逾 4 倍且市場處於極端逆風（S<sub>mkt</sub> = -5）下，最佳持股倉位強制壓縮為 <strong>0%</strong>。</p>
 			</div>
 
 			<div class="sub-block">
-				<div class="sub-block-title">籌碼結構與總體指標</div>
-				<p style="font-size: 0.875rem;">11/19 集中市場三大法人合計大賣 <strong>-461.03 億元</strong>（外資 -243.12 億、投信 +15.13 億、自營 -233.03 億）。外資台指期留倉淨空單反手增至約 <strong>53,200 口</strong>；新台幣重貶 12.0 分收 <strong>33.085 元</strong> 失守 33.00 大關；美債 10 年期殖利率報 5.12%，費半重挫 -4.28%，TSM ADR 跌至 389.96 美元，美股 VIX 暴漲至 21.45 點，CNN 恐懼指數跌至 24 點（極度恐慌）。</p>
-			</div>
-
-			<div class="sub-block">
-				<div class="sub-block-title">分析結論與策略</div>
-				<p style="font-size: 0.875rem;">因 S<sub>mkt</sub> = -5 &lt; 0 觸發 <code>ERR_MARKET_REGIME_RISK_OFF</code>（&kappa;<sub>regime</sub> = 0.00, H<sub>max</sub> = 0.0%），<strong>全面禁止開立任何新多單與加碼（N<sub>shares</sub> = 0, N<sub>add</sub> = 無）</strong>。帳戶總資產 W<sub>t</sub> = 492,813 元，持股市值 145,118 元（29.45%），現金 347,695 元（70.55%）。持股 2887 台新新光金 (R_t = -2.65R)、3533 嘉澤 (R_t = -1.82R)、6446 藥華藥 (R_t = -1.24R) 全數擊穿 -8% 硬停損標準，次日開盤市價全面出清退場，將帳戶調整為 100% 純現金以規避系統性下行風險。</p>
+				<div class="sub-block-title">籌碼結構與分析結論</div>
+				<p style="font-size: 0.875rem;">11/20 三大法人合計賣超 <strong>-522.46 億元</strong>（自營商狂砍 -340.84 億、投信轉賣 -87.49 億、外資賣超 -94.13 億）。外資台指期未平倉淨空單為 <strong>-97,863 口</strong>（微幅回補 1,356 口）；新台幣收 <strong>32.936 元</strong>（升 0.6 分）；費半跌 -2.42% 收 9,419.72 點，TSM ADR 跌 -2.90% 收 352.09 美元，CNN 恐懼指數 21.71（美盤前探 19）。結論：次日新倉委託全數歸零，並對 3 檔已嚴重擊穿 P<sub>stop,0</sub> 與 P1 防線之持股全數出清撤資，將現金拉升至 100% 守護本金遍歷性存活權。</p>
 			</div>
 		</section>
 
@@ -153,88 +108,116 @@
 		<section class="section">
 			<h2 class="section-title">分析持股</h2>
 
-			<div class="sub-block">
-				<div class="sub-block-title">投資組合概況與風控檢討</div>
-				<ul style="font-size: 0.875rem; line-height: 1.8; padding-left: 1.25rem;">
-					<li><strong>持股檔數與資產結構</strong>：目前持股 3 檔，總資產 W<sub>t</sub> = 492,813 元，股票市值 145,118 元（29.45%），現金 347,695 元（70.55%）。</li>
-					<li><strong>鐵律一（總在險資金 H<sub>max</sub>）</strong>：當前大盤 &kappa;<sub>regime</sub> = 0.00 要求 H<sub>max</sub> = 0.0%，現有持股在險額度已達強制平倉狀態。</li>
-					<li><strong>鐵律二（單一持股集中度上限）</strong>：3533 嘉澤市值 124,410 元佔比高達 <strong>25.25%</strong>，突破 25% 上限，違反集中度規則，必須全面出清！</li>
-					<li><strong>鐵律五（硬停損執行）</strong>：3 檔持股累積虧損分別為 -15.40% (2887)、-13.27% (3533)、-9.13% (6446)，全數擊穿 -8% 硬停損紅線，立即執行全面清倉。</li>
-				</ul>
-			</div>
-
-			<div class="table-scroll" style="margin-top: 1rem; margin-bottom: 1.5rem;">
+			<div class="table-scroll" style="margin-bottom: 1rem;">
 				<table class="data-table">
 					<thead>
 						<tr>
-							<th>股票代號與名稱</th>
-							<th>交易決策標籤</th>
-							<th class="num">成本價 / 收盤價</th>
-							<th class="num">持有股數</th>
-							<th class="num">目前市值</th>
-							<th class="num">帳面損益 (幅度)</th>
-							<th class="num">在險額度 (r<sub>open</sub>)</th>
-							<th>次日執行處置</th>
+							<th>投資組合風控指標</th>
+							<th class="num">11/20 最新數值</th>
+							<th>比例 / 風控檢核</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td class="stock">2887 台新新光金</td>
-							<td><span class="badge badge-sell">🔴 撤資</span></td>
-							<td class="num neg">42.20 / 35.70</td>
-							<td class="num">40 股</td>
-							<td class="num">1,428 元</td>
-							<td class="num neg">-260.00 (-15.40%)</td>
-							<td class="num">0.02%</td>
-							<td>開盤市價出清 40 股（收回約 1,428 元）</td>
+							<td class="stock">投資組合檔數</td>
+							<td class="num">3 檔個股</td>
+							<td>2887 台新新光金、3533 嘉澤、6446 藥華藥</td>
 						</tr>
 						<tr>
-							<td class="stock">3533 嘉澤</td>
-							<td><span class="badge badge-sell">🔴 撤資</span></td>
-							<td class="num neg">1,839.00 / 1,595.00</td>
-							<td class="num">78 股</td>
-							<td class="num neg">124,410 元</td>
-							<td class="num neg">-19,032.00 (-13.27%)</td>
-							<td class="num neg">2.16%</td>
-							<td>開盤市價出清 78 股（收回約 124,410 元）</td>
+							<td class="stock">資產總計 (W<sub>t</sub>)</td>
+							<td class="num">478,973 元</td>
+							<td class="neg">較 10/16 峰值 (548,351 元) 回撤 <strong>-12.65%</strong>（&ge; 12.0% &rArr; &kappa;<sub>dd</sub> = 0.00）</td>
 						</tr>
 						<tr>
-							<td class="stock">6446 藥華藥</td>
-							<td><span class="badge badge-sell">🔴 撤資</span></td>
-							<td class="num neg">1,326.12 / 1,205.00</td>
-							<td class="num">16 股</td>
-							<td class="num">19,280 元</td>
-							<td class="num neg">-1,938.00 (-9.13%)</td>
-							<td class="num">0.33%</td>
-							<td>開盤市價出清 16 股（收回約 19,280 元）</td>
+							<td class="stock">股票總市值</td>
+							<td class="num">131,278 元</td>
+							<td>佔總資產 <strong>27.41%</strong></td>
+						</tr>
+						<tr>
+							<td class="stock">可用現金 (C<sub>cash</sub>)</td>
+							<td class="num">347,695 元</td>
+							<td>佔總資產 <strong>72.59%</strong></td>
+						</tr>
+						<tr>
+							<td class="stock">基準 1R 風險預算</td>
+							<td class="num">4,790 元 (1.0%)</td>
+							<td>因 &kappa;<sub>regime</sub> = 0.00 且 &kappa;<sub>dd</sub> = 0.00，新倉預算 r<sub>actual</sub> = <strong>0 元</strong></td>
+						</tr>
+						<tr>
+							<td class="stock">當前總在險資金 (H<sub>open</sub>)</td>
+							<td class="num neg">2.65% (原定 P<sub>stop,0</sub>)</td>
+							<td class="neg">若依目前 ATR 停損價計暴露達 10.40%，全面超越 H<sub>max</sub> = 0.0%，r<sub>avail</sub> = <strong>0.0%</strong></td>
 						</tr>
 					</tbody>
 				</table>
 			</div>
 
-			<!-- 持股卡片 -->
+			<div class="callout" style="margin-bottom: 1.5rem;">
+				<p>🚨 <strong>五大鐵律違規檢核與強制處置計畫</strong>：<br>
+					1. <strong>違反鐵律一（虧損向下攤平）</strong>：3533 嘉澤曾於 11/10 虧損下攤平 12 股，引發幾何複利重大拖累（目前浮虧 -21.70%）。<br>
+					2. <strong>違反鐵律二（擊穿初始硬停損未離場）</strong>：3 檔持股皆已大幅低於 P<sub>stop,0</sub>（R<sub>t</sub> 分別為 -3.21R、-2.93R、-2.25R），嚴重觸發 P1 硬停損。<br>
+					3. <strong>違反鐵律三（單檔集中度超標）</strong>：3533 嘉澤佔比達 <strong>23.45%</strong>（突破 20% 硬上限）。<br>
+					4. <strong>強制修復計畫</strong>：次日開盤市價出清 2887 (40 股)、3533 (78 股，8:30 前預掛跌停／市價單) 與 6446 (16 股)，將現金拉升至 100%，Portfolio Heat 歸零。</p>
+			</div>
+
+			<!-- 2887 台新新光金 -->
 			<div class="card">
 				<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem;">
 					<div class="card-title" style="margin: 0;">2887 台新新光金</div>
 					<span class="badge badge-sell">🔴 撤資</span>
 				</div>
-				<p style="font-size: 0.875rem;">成本 42.20 元，現價 35.70 元，帳面損益 -260.00 元 (-15.40%)。R 乘數損益 R<sub>t</sub> = -2.65R，嚴重擊穿 -8% 初始硬停損門檻（38.80 元）。均線完全空頭向下發散，次日開盤市價出清 40 股，徹底截斷虧損。</p>
+				<p style="font-size: 0.875rem; margin-bottom: 0.5rem;">均線：<code>240MA (29.87) &lt; 5MA (36.93) &lt; 120MA (37.06) &lt; 10MA (38.50) &lt; 20MA (39.88) &lt; 60MA (40.98)</code>。收盤 33.95 元 (-4.90%)，ATR<sub>14,t</sub> = 1.98 元。外資 +17,205、投信 -1,017、自營 +8,748。</p>
+				<div class="kv-row">
+					<div class="kv-item"><span class="kv-label">平均成本</span><span class="kv-value">42.20</span></div>
+					<div class="kv-item"><span class="kv-label">庫存股數</span><span class="kv-value">40 股</span></div>
+					<div class="kv-item"><span class="kv-label">市值 (佔比)</span><span class="kv-value">1,358 (0.28%)</span></div>
+					<div class="kv-item"><span class="kv-label">未實現損益</span><span class="kv-value neg">-330 元 (-19.55% / 淨 -20.13%)</span></div>
+					<div class="kv-item"><span class="kv-label">R<sub>t</sub> / P<sub>stop,0</sub></span><span class="kv-value neg">-3.21R / 39.80 元</span></div>
+				</div>
+				<div class="sub-block" style="margin-top: 0.75rem;">
+					<div class="sub-block-title">期望值引擎與凱利倉位計算</div>
+					<p style="font-size: 0.85rem; margin: 0;">• <strong>四維計分與 TC</strong>：S<sub>trend</sub>(8) + S<sub>vol</sub>(0, &rho;=0.835) + S<sub>chip</sub>(21) + S<sub>fund</sub>(9) = <strong>38 分</strong> &rArr; TC = (38-50)/10 + 0.5(-5) = <strong>-3.70</strong>。<br>• <strong>型態與條件勝率</strong>：<strong>Setup N</strong>（p<sub>0</sub>=35.0%）&rArr; p = clip(0.350 + 0.025 &times; (-3.70), 0.20, 0.50) = <strong>25.75%</strong>，q = <strong>74.25%</strong>。<br>• <strong>定錨價與期望值</strong>：P<sub>entry</sub>=33.95、P<sub>stop,raw</sub>=33.45、ATR 校正 P<sub>stop</sub>=<strong>31.95 元</strong>（a=<strong>6.476%</strong>）；&lambda;=0.85、P<sub>target</sub>=<strong>43.20 元</strong>（b=<strong>26.661%</strong>）；B = <strong>4.1169</strong>，E[R] = <strong>+0.3176R</strong>。<br>• <strong>凱利倉位與處置</strong>：r* = 7.71%；因 &kappa;<sub>regime</sub>=0, &kappa;<sub>dd</sub>=0 &rArr; r<sub>actual</sub>=0%, N<sub>shares</sub>=<strong>0 股</strong>。既有部位 P<sub>stop,active</sub>=39.80（a<sub>0</sub>=6.272%），已被現價大幅跌破。<br>• <strong>加減碼與防線</strong>：加碼：<strong>無</strong>。減碼：<strong>觸發 P1 硬停損</strong>，次日開盤市價賣出減碼 <strong>40 股（100% 出清）</strong>。Reject<sub>liq</sub>=False, Reject<sub>fraud</sub>=False。</p>
+				</div>
 			</div>
 
+			<!-- 3533 嘉澤 -->
 			<div class="card">
 				<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem;">
 					<div class="card-title" style="margin: 0;">3533 嘉澤</div>
 					<span class="badge badge-sell">🔴 撤資</span>
 				</div>
-				<p style="font-size: 0.875rem;">成本 1,839.00 元，現價 1,595.00 元，帳面損益 -19,032.00 元 (-13.27%)。R 乘數損益 R<sub>t</sub> = -1.82R，摜破年線 240MA (1,862.60 元) 與硬停損線（1,690.00 元），且持股市值佔比 25.25% 突破風控上限。次日開盤市價出清 78 股，保全現金。</p>
+				<p style="font-size: 0.875rem; margin-bottom: 0.5rem;">均線：<code>5MA (1,628.00) &lt; 10MA (1,707.50) &lt; 60MA (1,730.00) &lt; 20MA (1,756.50) &lt; 240MA (1,863.79) &lt; 120MA (1,901.25)</code>。收盤跌停 1,440.00 元 (-9.72%)，ATR<sub>14,t</sub> = 150.36 元。外資 +53、投信 0、自營 -11。</p>
+				<div class="kv-row">
+					<div class="kv-item"><span class="kv-label">平均成本</span><span class="kv-value">1,839.00</span></div>
+					<div class="kv-item"><span class="kv-label">庫存股數</span><span class="kv-value">78 股</span></div>
+					<div class="kv-item"><span class="kv-label">市值 (佔比)</span><span class="kv-value neg">112,320 (23.45% 超標)</span></div>
+					<div class="kv-item"><span class="kv-label">未實現損益</span><span class="kv-value neg">-31,122 元 (-21.70% / 淨 -22.28%)</span></div>
+					<div class="kv-item"><span class="kv-label">R<sub>t</sub> / P<sub>stop,0</sub></span><span class="kv-value neg">-2.93R / 1,710.00 元</span></div>
+				</div>
+				<div class="sub-block" style="margin-top: 0.75rem;">
+					<div class="sub-block-title">期望值引擎與凱利倉位計算</div>
+					<p style="font-size: 0.85rem; margin: 0;">• <strong>四維計分與 TC</strong>：S<sub>trend</sub>(0) + S<sub>vol</sub>(0, &rho;=0.872) + S<sub>chip</sub>(25) + S<sub>fund</sub>(9) = <strong>34 分</strong> &rArr; TC = (34-50)/10 + 0.5(-5) = <strong>-4.10</strong>。<br>• <strong>型態與條件勝率</strong>：<strong>Setup N</strong>（p<sub>0</sub>=35.0%）&rArr; p = clip(0.350 + 0.025 &times; (-4.10), 0.20, 0.50) = <strong>24.75%</strong>，q = <strong>75.25%</strong>。<br>• <strong>定錨價與期望值</strong>：P<sub>entry</sub>=1,440.00、P<sub>stop,raw</sub>=1,435.00、ATR 校正 P<sub>stop</sub>=<strong>1,285.00 元</strong>（a=<strong>11.349%</strong>）；&lambda;=0.85、P<sub>target</sub>=<strong>1,950.00 元</strong>（b=<strong>34.832%</strong>）；B = <strong>3.0692</strong>，E[R] = <strong>+0.0071R</strong> &lt; +0.20R（期望值趨近零）。<br>• <strong>凱利倉位與處置</strong>：r* = 0.23%；r<sub>actual</sub>=0%, N<sub>shares</sub>=<strong>0 股</strong>。既有部位 P<sub>stop,active</sub>=1,710.00（a<sub>0</sub>=7.600%），已遠低於停損點；原定 r<sub>open,0</sub>=2.28%（實際帳面損失佔總資產 6.67%）。<br>• <strong>加減碼與防線</strong>：加碼：<strong>無</strong>。減碼：<strong>嚴重觸發 P1 硬停損</strong>，須於次日 8:30 前預掛跌停／市價賣單減碼 <strong>78 股（100% 出清）</strong>，同步修復鐵律一/二/三違規。Reject<sub>liq</sub>=False, Reject<sub>fraud</sub>=False。</p>
+				</div>
 			</div>
 
+			<!-- 6446 藥華藥 -->
 			<div class="card">
 				<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem;">
 					<div class="card-title" style="margin: 0;">6446 藥華藥</div>
 					<span class="badge badge-sell">🔴 撤資</span>
 				</div>
-				<p style="font-size: 0.875rem;">成本 1,326.12 元，現價 1,205.00 元，帳面損益 -1,938.00 元 (-9.13%)。R 乘數損益 R<sub>t</sub> = -1.24R，摜破月線 20MA (1,251.50) 與季線 60MA (1,264.58)，跌破 -8% 硬停損防線（1,220.00 元）。次日開盤市價出清 16 股退場觀望。</p>
+				<p style="font-size: 0.875rem; margin-bottom: 0.5rem;">均線：<code>240MA (926.94) &lt; 120MA (1,224.48) &lt; 5MA (1,225.00) &lt; 20MA (1,247.75) &lt; 60MA (1,259.58) &lt; 10MA (1,285.50)</code>。收盤 1,100.00 元 (-8.71%)，ATR<sub>14,t</sub> = 96.43 元。外資 +923、投信 +13、自營 +56。</p>
+				<div class="kv-row">
+					<div class="kv-item"><span class="kv-label">平均成本</span><span class="kv-value">1,326.12</span></div>
+					<div class="kv-item"><span class="kv-label">庫存股數</span><span class="kv-value">16 股</span></div>
+					<div class="kv-item"><span class="kv-label">市值 (佔比)</span><span class="kv-value">17,600 (3.67%)</span></div>
+					<div class="kv-item"><span class="kv-label">未實現損益</span><span class="kv-value neg">-3,618 元 (-17.05% / 淨 -17.64%)</span></div>
+					<div class="kv-item"><span class="kv-label">R<sub>t</sub> / P<sub>stop,0</sub></span><span class="kv-value neg">-2.25R / 1,230.00 元</span></div>
+				</div>
+				<div class="sub-block" style="margin-top: 0.75rem;">
+					<div class="sub-block-title">期望值引擎與凱利倉位計算</div>
+					<p style="font-size: 0.85rem; margin: 0;">• <strong>四維計分與 TC</strong>：S<sub>trend</sub>(8) + S<sub>vol</sub>(0, &rho;=0.896) + S<sub>chip</sub>(25) + S<sub>fund</sub>(17) = <strong>50 分</strong> &rArr; TC = (50-50)/10 + 0.5(-5) = <strong>-2.50</strong>。<br>• <strong>型態與條件勝率</strong>：<strong>Setup N</strong>（p<sub>0</sub>=35.0%）&rArr; p = clip(0.350 + 0.025 &times; (-2.50), 0.20, 0.50) = <strong>28.75%</strong>，q = <strong>71.25%</strong>。<br>• <strong>定錨價與期望值</strong>：P<sub>entry</sub>=1,100.00、P<sub>stop,raw</sub>=1,080.00、ATR 校正 P<sub>stop</sub>=<strong>1,000.00 元</strong>（a=<strong>9.676%</strong>）；&lambda;=0.85、P<sub>target</sub>=<strong>1,565.00 元</strong>（b=<strong>41.688%</strong>）；B = <strong>4.3084</strong>，E[R] = <strong>+0.5262R</strong>。<br>• <strong>凱利倉位與處置</strong>：r* = 12.21%；因 &kappa;<sub>regime</sub>=0, &kappa;<sub>dd</sub>=0 &rArr; r<sub>actual</sub>=0%, N<sub>shares</sub>=<strong>0 股</strong>。既有部位 P<sub>stop,active</sub>=1,230.00（a<sub>0</sub>=7.833%），已被現價擊穿。<br>• <strong>加減碼與防線</strong>：加碼：<strong>無</strong>。減碼：<strong>觸發 P1 硬停損</strong>，次日開盤市價賣出減碼 <strong>16 股（100% 出清）</strong>。Reject<sub>liq</sub>=False, Reject<sub>fraud</sub>=False（Q3 OCF 84.03 億健康）。</p>
+				</div>
 			</div>
 		</section>
 
@@ -242,192 +225,245 @@
 		<section class="section">
 			<h2 class="section-title">分析指定個股</h2>
 			<div class="sub-block">
-				<div class="sub-block-title">全方位量化檢核矩陣</div>
-				<p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 0.75rem;">註：因大盤環境計數 S<sub>mkt</sub> = -5 &lt; 0 判定為 🔴 Risk-Off，環境調節乘數 &kappa;<sub>regime</sub> = 0.00，所有候選個股之核定買進股數 N<sub>shares</sub> 一律強制歸零，系統阻擋代碼：<code>ERR_MARKET_REGIME_RISK_OFF</code>。</p>
+				<div class="sub-block-title">總體裁決與第一層／第三層防線總否決</div>
+				<p style="font-size: 0.875rem;">因大盤計數 <strong>S<sub>mkt</sub> = -5 &lt; 0</strong>（&kappa;<sub>regime</sub> = 0.00, H<sub>max</sub> = 0.0%）且帳戶淨值回撤 <strong>12.65% &ge; 12.0%</strong>（&kappa;<sub>dd</sub> = 0.00），所有 11 檔指定個股之實戰風險預算 r<sub>actual</sub> 與核定買進股數 N<sub>shares</sub> 一律強制歸零（<strong>0 股</strong>），全數判定為 <strong>⚪ 觀望</strong>。此外，11 檔全數落入 Setup N（基準勝率 35%），條件勝率僅 20.00%～29.25%，且 3081、3443、3532、4991 均觸發一字無量跌停鎖死（<code>Reject<sub>liq</sub> = True</code>）。</p>
+			</div>
+
+			<div class="sub-block">
+				<div class="sub-block-title">短期指定名單 11 檔全方位量化檢核矩陣</div>
 				<div class="table-scroll">
 					<table class="data-table">
 						<thead>
 							<tr>
 								<th>股票代號與名稱</th>
 								<th class="num">收盤價</th>
-								<th class="num">勝率 (p)</th>
-								<th class="num">賠率 (b)</th>
-								<th class="num">全凱利 (f*)</th>
-								<th class="num">核定股數 (N<sub>shares</sub>)</th>
-								<th>交易決策標籤</th>
-								<th>風控阻擋原因</th>
+								<th class="num">四維總分 (S<sub>stock</sub>)</th>
+								<th class="num">真實計數 (TC)</th>
+								<th>策略型態 / 勝率 (p)</th>
+								<th class="num">P<sub>stop</sub> (a)</th>
+								<th class="num">P<sub>target</sub> (b)</th>
+								<th class="num">盈虧比 (B)</th>
+								<th class="num">期望值 (E[R])</th>
+								<th class="num">核定股數</th>
+								<th>標籤</th>
+								<th>否決 / 異常代碼</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
 								<td class="stock">1802 台玻</td>
-								<td class="num">58.70</td>
-								<td class="num">42%</td>
-								<td class="num">1.65</td>
-								<td class="num">5.30%</td>
+								<td class="num">52.90</td>
+								<td class="num">24 (0/0/4/20)</td>
+								<td class="num">-5.10</td>
+								<td>Setup N (22.25%)</td>
+								<td class="num">45.80 (14.01%)</td>
+								<td class="num">84.10 (58.39%)</td>
+								<td class="num">4.17</td>
+								<td class="num">+0.1501R</td>
 								<td class="num">0 股</td>
 								<td><span class="badge badge-hold">⚪ 觀望</span></td>
-								<td><code>ERR_MARKET_REGIME_RISK_OFF</code></td>
+								<td><code>ERR_MARKET_REGIME_RISK_OFF</code> / <code>ERR_NEGATIVE_EDGE</code></td>
 							</tr>
 							<tr>
 								<td class="stock">2303 聯電</td>
-								<td class="num">88.20</td>
-								<td class="num">45%</td>
-								<td class="num">1.70</td>
-								<td class="num">20.23%</td>
+								<td class="num">80.30</td>
+								<td class="num">50 (0/15/21/14)</td>
+								<td class="num">-2.50</td>
+								<td>Setup N (28.75%)</td>
+								<td class="num">73.20 (9.43%)</td>
+								<td class="num">155.50 (93.06%)</td>
+								<td class="num">9.87</td>
+								<td class="num">+2.1258R</td>
 								<td class="num">0 股</td>
 								<td><span class="badge badge-hold">⚪ 觀望</span></td>
-								<td><code>ERR_MARKET_REGIME_RISK_OFF</code></td>
+								<td><code>ERR_MARKET_REGIME_RISK_OFF</code> / <code>ERR_DRAWDOWN_CIRCUIT_BREAKER</code></td>
 							</tr>
 							<tr>
 								<td class="stock">2409 友達</td>
-								<td class="num">27.20</td>
-								<td class="num">38%</td>
-								<td class="num">1.40</td>
-								<td class="num">0.00%</td>
+								<td class="num">23.25</td>
+								<td class="num">11 (0/0/11/0)</td>
+								<td class="num">-6.40</td>
+								<td>Setup N (20.00%)</td>
+								<td class="num">21.10 (9.83%)</td>
+								<td class="num">31.10 (33.18%)</td>
+								<td class="num">3.37</td>
+								<td class="num neg">-0.1251R</td>
 								<td class="num">0 股</td>
 								<td><span class="badge badge-hold">⚪ 觀望</span></td>
-								<td><code>ERR_MARKET_REGIME_RISK_OFF</code></td>
+								<td><code>ERR_MARKET_REGIME_RISK_OFF</code> / <code>ERR_NEGATIVE_EXPECTED_VALUE</code></td>
 							</tr>
 							<tr>
 								<td class="stock">3037 欣興</td>
-								<td class="num">596.00</td>
-								<td class="num">46%</td>
-								<td class="num">1.85</td>
-								<td class="num">16.34%</td>
+								<td class="num">537.00</td>
+								<td class="num">42 (0/15/10/17)</td>
+								<td class="num">-3.30</td>
+								<td>Setup N (26.75%)</td>
+								<td class="num">459.00 (15.11%)</td>
+								<td class="num">1,290.00 (139.64%)</td>
+								<td class="num">9.24</td>
+								<td class="num">+1.7396R</td>
 								<td class="num">0 股</td>
 								<td><span class="badge badge-hold">⚪ 觀望</span></td>
-								<td><code>ERR_MARKET_REGIME_RISK_OFF</code></td>
+								<td><code>ERR_MARKET_REGIME_RISK_OFF</code> / <code>ERR_DRAWDOWN_CIRCUIT_BREAKER</code></td>
 							</tr>
 							<tr>
 								<td class="stock">3081 聯亞</td>
-								<td class="num">1,515.00</td>
-								<td class="num">48%</td>
-								<td class="num">1.90</td>
-								<td class="num">19.97%</td>
+								<td class="num">1,365.00</td>
+								<td class="num">48 (0/10/21/17)</td>
+								<td class="num">-2.70</td>
+								<td>Setup N (28.25%)</td>
+								<td class="num">1,170.00 (14.87%)</td>
+								<td class="num">3,265.00 (138.61%)</td>
+								<td class="num">9.32</td>
+								<td class="num">+1.9157R</td>
 								<td class="num">0 股</td>
 								<td><span class="badge badge-hold">⚪ 觀望</span></td>
-								<td><code>ERR_MARKET_REGIME_RISK_OFF</code></td>
+								<td><code>ERR_REJECT_LIQ</code> (一字跌停) / <code>ERR_MARKET_REGIME_RISK_OFF</code></td>
 							</tr>
 							<tr>
 								<td class="stock">3443 創意</td>
-								<td class="num">6,000.00</td>
-								<td class="num">44%</td>
-								<td class="num">1.75</td>
-								<td class="num">6.77%</td>
+								<td class="num">5,400.00</td>
+								<td class="num">49 (8/0/21/20)</td>
+								<td class="num">-2.60</td>
+								<td>Setup N (28.50%)</td>
+								<td class="num">4,685.00 (13.83%)</td>
+								<td class="num">8,250.00 (52.19%)</td>
+								<td class="num">3.78</td>
+								<td class="num">+0.3609R</td>
 								<td class="num">0 股</td>
 								<td><span class="badge badge-hold">⚪ 觀望</span></td>
-								<td><code>ERR_MARKET_REGIME_RISK_OFF</code></td>
+								<td><code>ERR_REJECT_LIQ</code> (一字跌停) / <code>ERR_MARKET_REGIME_RISK_OFF</code></td>
 							</tr>
 							<tr>
 								<td class="stock">3529 力旺</td>
-								<td class="num">1,995.00</td>
-								<td class="num">45%</td>
-								<td class="num">1.80</td>
-								<td class="num">14.10%</td>
+								<td class="num">1,800.00</td>
+								<td class="num">40 (0/10/13/17)</td>
+								<td class="num">-3.50</td>
+								<td>Setup N (26.25%)</td>
+								<td class="num">1,600.00 (11.70%)</td>
+								<td class="num">3,360.00 (86.08%)</td>
+								<td class="num">7.36</td>
+								<td class="num">+1.1945R</td>
 								<td class="num">0 股</td>
 								<td><span class="badge badge-hold">⚪ 觀望</span></td>
-								<td><code>ERR_MARKET_REGIME_RISK_OFF</code></td>
+								<td><code>ERR_MARKET_REGIME_RISK_OFF</code> / <code>ERR_DRAWDOWN_CIRCUIT_BREAKER</code></td>
 							</tr>
 							<tr>
 								<td class="stock">3532 台勝科</td>
-								<td class="num">207.00</td>
-								<td class="num">47%</td>
-								<td class="num">1.85</td>
-								<td class="num">18.62%</td>
+								<td class="num">186.50</td>
+								<td class="num">41 (0/15/21/5)</td>
+								<td class="num">-3.40</td>
+								<td>Setup N (26.50%)</td>
+								<td class="num">160.00 (14.79%)</td>
+								<td class="num">468.50 (150.62%)</td>
+								<td class="num">10.18</td>
+								<td class="num">+1.9630R</td>
 								<td class="num">0 股</td>
 								<td><span class="badge badge-hold">⚪ 觀望</span></td>
-								<td><code>ERR_MARKET_REGIME_RISK_OFF</code></td>
+								<td><code>ERR_REJECT_LIQ</code> (一字跌停) / <code>ERR_MARKET_REGIME_RISK_OFF</code></td>
 							</tr>
 							<tr>
 								<td class="stock">3661 世芯-KY</td>
-								<td class="num">3,600.00</td>
-								<td class="num">44%</td>
-								<td class="num">1.80</td>
-								<td class="num">9.25%</td>
+								<td class="num">3,240.00</td>
+								<td class="num">52 (3/10/22/17)</td>
+								<td class="num">-2.30</td>
+								<td>Setup N (29.25%)</td>
+								<td class="num">2,905.00 (10.93%)</td>
+								<td class="num">4,450.00 (36.76%)</td>
+								<td class="num">3.37</td>
+								<td class="num">+0.2768R</td>
 								<td class="num">0 股</td>
 								<td><span class="badge badge-hold">⚪ 觀望</span></td>
-								<td><code>ERR_MARKET_REGIME_RISK_OFF</code></td>
+								<td><code>ERR_MARKET_REGIME_RISK_OFF</code> / <code>WARN_CONSECUTIVE_NEG_OCF</code></td>
 							</tr>
 							<tr>
 								<td class="stock">4960 誠美材</td>
-								<td class="num">24.75</td>
-								<td class="num">36%</td>
-								<td class="num">1.35</td>
-								<td class="num">0.00%</td>
+								<td class="num">22.30</td>
+								<td class="num">11 (0/5/6/0)</td>
+								<td class="num">-6.40</td>
+								<td>Setup N (20.00%)</td>
+								<td class="num">19.10 (14.94%)</td>
+								<td class="num">35.40 (58.16%)</td>
+								<td class="num">3.89</td>
+								<td class="num neg">-0.0212R</td>
 								<td class="num">0 股</td>
 								<td><span class="badge badge-hold">⚪ 觀望</span></td>
-								<td><code>ERR_MARKET_REGIME_RISK_OFF</code></td>
+								<td><code>ERR_MARKET_REGIME_RISK_OFF</code> / <code>ERR_NEGATIVE_EXPECTED_VALUE</code></td>
 							</tr>
 							<tr>
 								<td class="stock">4991 環宇-KY</td>
-								<td class="num">272.50</td>
-								<td class="num">46%</td>
-								<td class="num">1.80</td>
-								<td class="num">17.17%</td>
+								<td class="num">245.50</td>
+								<td class="num">33 (0/10/6/17)</td>
+								<td class="num">-4.20</td>
+								<td>Setup N (24.50%)</td>
+								<td class="num">212.50 (14.03%)</td>
+								<td class="num">513.00 (108.38%)</td>
+								<td class="num">7.73</td>
+								<td class="num">+1.1379R</td>
 								<td class="num">0 股</td>
 								<td><span class="badge badge-hold">⚪ 觀望</span></td>
-								<td><code>ERR_MARKET_REGIME_RISK_OFF</code></td>
+								<td><code>ERR_REJECT_LIQ</code> (一字跌停) / <code>ERR_MARKET_REGIME_RISK_OFF</code></td>
 							</tr>
 						</tbody>
 					</table>
 				</div>
+				<p style="font-size: 0.82rem; color: var(--color-text-muted); margin-top: 0.5rem;">註：2409 友達因本地暫缺 CSV 檔案，係依據 11/20 市場公開報價與近 10 日波動估算代入公式。</p>
 			</div>
 
 			<!-- 11 檔候選個股量化詳細卡片 -->
 			<div class="card">
-				<div class="card-title">1802 台玻 ⚪ 觀望</div>
-				<p style="font-size: 0.875rem;">全凱利風險 r* = 5.30%。因大盤 &kappa;<sub>regime</sub> = 0.00，r<sub>actual</sub> = 0.00%，N<sub>shares</sub> = 0 股。跌停摜破 20MA 與 60MA，回測年線，嚴守紀律觀望。</p>
+				<div class="card-title">1802 台玻 <span class="badge badge-hold" style="margin-left: 0.5rem;">⚪ 觀望</span></div>
+				<p style="font-size: 0.875rem;">S<sub>stock</sub>=24, TC=-5.10, Setup N 勝率 p=22.25%。r*=3.60%, E[R]=+0.1501R &lt; +0.20R。受 &kappa;<sub>regime</sub>=0, &kappa;<sub>dd</sub>=0 阻斷，r<sub>actual</sub>=0%, N<sub>shares</sub>=<strong>0 股</strong>。近 5 日法人大賣而融資增加，嚴禁接刀。加碼：無；減碼：無。</p>
 			</div>
 
 			<div class="card">
-				<div class="card-title">2303 聯電 ⚪ 觀望</div>
-				<p style="font-size: 0.875rem;">全凱利風險 r* = 20.23%。因大盤 &kappa;<sub>regime</sub> = 0.00，r<sub>actual</sub> = 0.00%，N<sub>shares</sub> = 0 股。跌破年線與短中均線，空頭排列向下發散，禁止開倉。</p>
+				<div class="card-title">2303 聯電 <span class="badge badge-hold" style="margin-left: 0.5rem;">⚪ 觀望</span></div>
+				<p style="font-size: 0.875rem;">S<sub>stock</sub>=50, TC=-2.50, Setup N 勝率 p=28.75%。r*=21.53%, E[R]=+2.1258R。受 &kappa;<sub>regime</sub>=0, &kappa;<sub>dd</sub>=0 阻斷，r<sub>actual</sub>=0%, N<sub>shares</sub>=<strong>0 股</strong>。投信單日狂賣 -35,360 張且空頭破底，禁止進場。加碼：無；減碼：無。</p>
 			</div>
 
 			<div class="card">
-				<div class="card-title">2409 友達 ⚪ 觀望</div>
-				<p style="font-size: 0.875rem;">因大盤 &kappa;<sub>regime</sub> = 0.00，r<sub>actual</sub> = 0.00%，N<sub>shares</sub> = 0 股。基本面 Q3 持續虧損，均線全面向下，堅決觀望。*(註：該標的目前交易資料暫缺完整 CSV，數值採模型動態追蹤。)*</p>
+				<div class="card-title">2409 友達 <span class="badge badge-hold" style="margin-left: 0.5rem;">⚪ 觀望</span></div>
+				<p style="font-size: 0.875rem;">S<sub>stock</sub>=11, TC=-6.40, Setup N 勝率 p=20.00%。E[R]=-0.1251R &lt; 0（r* &le; 0%），r<sub>actual</sub>=0%, N<sub>shares</sub>=<strong>0 股</strong>。Q3 EPS -0.33 轉虧且均線全面向下。加碼：無；減碼：無。（依市場公開數據計算）</p>
 			</div>
 
 			<div class="card">
-				<div class="card-title">3037 欣興 ⚪ 觀望</div>
-				<p style="font-size: 0.875rem;">全凱利風險 r* = 16.34%。因大盤 &kappa;<sub>regime</sub> = 0.00，r<sub>actual</sub> = 0.00%，N<sub>shares</sub> = 0 股。跌停摜破 600 元心理防線與年線，融資斷頭潮湧現，嚴禁接飛刀。</p>
+				<div class="card-title">3037 欣興 <span class="badge badge-hold" style="margin-left: 0.5rem;">⚪ 觀望</span></div>
+				<p style="font-size: 0.875rem;">S<sub>stock</sub>=42, TC=-3.30, Setup N 勝率 p=26.75%。r*=18.82%, E[R]=+1.7396R。受 &kappa;<sub>regime</sub>=0, &kappa;<sub>dd</sub>=0 阻斷，r<sub>actual</sub>=0%, N<sub>shares</sub>=<strong>0 股</strong>。雖投信買超 +2,007 張，但跳空跌停遠離所有均線，嚴禁摸底。加碼：無；減碼：無。</p>
 			</div>
 
 			<div class="card">
-				<div class="card-title">3081 聯亞 ⚪ 觀望</div>
-				<p style="font-size: 0.875rem;">全凱利風險 r* = 19.97%。因大盤 &kappa;<sub>regime</sub> = 0.00，r<sub>actual</sub> = 0.00%，N<sub>shares</sub> = 0 股。跌停摜破年線與所有均線，短線流動性凍結，不開倉。</p>
+				<div class="card-title">3081 聯亞 <span class="badge badge-hold" style="margin-left: 0.5rem;">⚪ 觀望</span></div>
+				<p style="font-size: 0.875rem;">S<sub>stock</sub>=48, TC=-2.70, Setup N 勝率 p=28.25%。r*=20.55%。<strong>觸發一票否決 Reject<sub>liq</sub> = True</strong>（成交 500 張一字跌停鎖死）及 &kappa;<sub>regime</sub>=0，強制鎖死 p=0, N<sub>shares</sub>=<strong>0 股</strong>。加碼：無；減碼：無。</p>
 			</div>
 
 			<div class="card">
-				<div class="card-title">3443 創意 ⚪ 觀望</div>
-				<p style="font-size: 0.875rem;">全凱利風險 r* = 6.77%。因大盤 &kappa;<sub>regime</sub> = 0.00，r<sub>actual</sub> = 0.00%，N<sub>shares</sub> = 0 股。跌停失守月線回測 6,000 大關，靜待籌碼洗淨打底。</p>
+				<div class="card-title">3443 創意 <span class="badge badge-hold" style="margin-left: 0.5rem;">⚪ 觀望</span></div>
+				<p style="font-size: 0.875rem;">S<sub>stock</sub>=49, TC=-2.60, Setup N 勝率 p=28.50%。r*=9.56%, E[R]=+0.3609R。<strong>觸發一票否決 Reject<sub>liq</sub> = True</strong>（成交 483 張一字跌停鎖死）及 &kappa;<sub>regime</sub>=0，N<sub>shares</sub>=<strong>0 股</strong>。基本面滿分 (S<sub>fund</sub>=20)，待順風期追蹤。加碼：無；減碼：無。</p>
 			</div>
 
 			<div class="card">
-				<div class="card-title">3529 力旺 ⚪ 觀望</div>
-				<p style="font-size: 0.875rem;">全凱利風險 r* = 14.10%。因大盤 &kappa;<sub>regime</sub> = 0.00，r<sub>actual</sub> = 0.00%，N<sub>shares</sub> = 0 股。跌停摜破 2,000 元，遠低於年線，空頭加速段嚴禁摸底。</p>
+				<div class="card-title">3529 力旺 <span class="badge badge-hold" style="margin-left: 0.5rem;">⚪ 觀望</span></div>
+				<p style="font-size: 0.875rem;">S<sub>stock</sub>=40, TC=-3.50, Setup N 勝率 p=26.25%。r*=16.23%, E[R]=+1.1945R。受 &kappa;<sub>regime</sub>=0, &kappa;<sub>dd</sub>=0 阻斷，r<sub>actual</sub>=0%, N<sub>shares</sub>=<strong>0 股</strong>。跌停破底遠低於年線，維持觀望。加碼：無；減碼：無。</p>
 			</div>
 
 			<div class="card">
-				<div class="card-title">3532 台勝科 ⚪ 觀望</div>
-				<p style="font-size: 0.875rem;">全凱利風險 r* = 18.62%。因大盤 &kappa;<sub>regime</sub> = 0.00，r<sub>actual</sub> = 0.00%，N<sub>shares</sub> = 0 股。跌停摜破年線與所有均線，弱勢破底不開倉。</p>
+				<div class="card-title">3532 台勝科 <span class="badge badge-hold" style="margin-left: 0.5rem;">⚪ 觀望</span></div>
+				<p style="font-size: 0.875rem;">S<sub>stock</sub>=41, TC=-3.40, Setup N 勝率 p=26.50%。r*=19.28%。<strong>觸發一票否決 Reject<sub>liq</sub> = True</strong>（成交 298 張一字跌停鎖死）及 &kappa;<sub>regime</sub>=0，N<sub>shares</sub>=<strong>0 股</strong>。加碼：無；減碼：無。</p>
 			</div>
 
 			<div class="card">
-				<div class="card-title">3661 世芯-KY ⚪ 觀望</div>
-				<p style="font-size: 0.875rem;">全凱利風險 r* = 9.25%。因大盤 &kappa;<sub>regime</sub> = 0.00，r<sub>actual</sub> = 0.00%，N<sub>shares</sub> = 0 股。爆量 6,000 張長黑吞噬昨日漲停，再度跌破年線，維持觀望。</p>
+				<div class="card-title">3661 世芯-KY <span class="badge badge-hold" style="margin-left: 0.5rem;">⚪ 觀望</span></div>
+				<p style="font-size: 0.875rem;">S<sub>stock</sub>=52, TC=-2.30, Setup N 勝率 p=29.25%。r*=8.22%, E[R]=+0.2768R。受 &kappa;<sub>regime</sub>=0, &kappa;<sub>dd</sub>=0 阻斷，N<sub>shares</sub>=<strong>0 股</strong>。註：Q2/Q3 OCF 連續兩季為負（-38.63 億 / -165.29 億），AR+INV 佔流動資產 55.09%（未達 75% 否決線但須高度警戒）。加碼：無；減碼：無。</p>
 			</div>
 
 			<div class="card">
-				<div class="card-title">4960 誠美材 ⚪ 觀望</div>
-				<p style="font-size: 0.875rem;">因大盤 &kappa;<sub>regime</sub> = 0.00，r<sub>actual</sub> = 0.00%，N<sub>shares</sub> = 0 股。跌停摜破月線季線逼近年線，本業連續虧損，堅決觀望。</p>
+				<div class="card-title">4960 誠美材 <span class="badge badge-hold" style="margin-left: 0.5rem;">⚪ 觀望</span></div>
+				<p style="font-size: 0.875rem;">S<sub>stock</sub>=11, TC=-6.40, Setup N 勝率 p=20.00%（下界）。E[R]=-0.0212R &lt; 0（r*=-0.54%），r<sub>actual</sub>=0%, N<sub>shares</sub>=<strong>0 股</strong>。連季虧損且破年線，完全排除。加碼：無；減碼：無。</p>
 			</div>
 
 			<div class="card">
-				<div class="card-title">4991 環宇-KY ⚪ 觀望</div>
-				<p style="font-size: 0.875rem;">全凱利風險 r* = 17.17%。因大盤 &kappa;<sub>regime</sub> = 0.00，r<sub>actual</sub> = 0.00%，N<sub>shares</sub> = 0 股。跌停鎖死遠低於年線季線，破底空頭絕對禁止抄底。</p>
+				<div class="card-title">4991 環宇-KY <span class="badge badge-hold" style="margin-left: 0.5rem;">⚪ 觀望</span></div>
+				<p style="font-size: 0.875rem;">S<sub>stock</sub>=33, TC=-4.20, Setup N 勝率 p=24.50%。r*=14.73%。<strong>觸發一票否決 Reject<sub>liq</sub> = True</strong>（成交 310 張一字跌停鎖死）及 &kappa;<sub>regime</sub>=0，N<sub>shares</sub>=<strong>0 股</strong>。加碼：無；減碼：無。</p>
 			</div>
 		</section>
 
@@ -456,17 +492,17 @@
 								<td>現股賣出</td>
 								<td>開盤市價</td>
 								<td><strong>40 股</strong></td>
-								<td>約 1,428</td>
-								<td>觸發 P1 初始硬停損（虧損 -15.40%），出清收回流動性</td>
+								<td>約 1,358</td>
+								<td>觸發 P1 硬停損（R<sub>t</sub> = -3.21R），徹底截斷虧損</td>
 							</tr>
 							<tr>
 								<td class="stock">3533 嘉澤</td>
-								<td><strong>市價賣出</strong></td>
+								<td><strong>市價／跌停賣出</strong></td>
 								<td>現股賣出</td>
-								<td>開盤市價</td>
+								<td>8:30 前預掛跌停／市價</td>
 								<td><strong>78 股</strong></td>
-								<td>約 124,410</td>
-								<td>摜破年線與硬停損（虧損 -13.27%），單一持股佔比 25.25% 超標出清</td>
+								<td>約 112,320</td>
+								<td>觸發 P1 硬停損（R<sub>t</sub> = -2.93R）與單檔 23.45% 超標修復</td>
 							</tr>
 							<tr>
 								<td class="stock">6446 藥華藥</td>
@@ -474,31 +510,22 @@
 								<td>現股賣出</td>
 								<td>開盤市價</td>
 								<td><strong>16 股</strong></td>
-								<td>約 19,280</td>
-								<td>摜破月線季線與硬停損（虧損 -9.13%），全數市價停損出清</td>
+								<td>約 17,600</td>
+								<td>觸發 P1 硬停損（R<sub>t</sub> = -2.25R），收回現金避險</td>
 							</tr>
 						</tbody>
 					</table>
 				</div>
 			</div>
 			<div class="card">
-				<div class="card-title">處置後投資組合風控健康度重估</div>
+				<div class="card-title">處置後投資組合風控健康度重估與複利哲學</div>
 				<div class="kv-row">
-					<div class="kv-item"><span class="kv-label">持股檔數</span><span class="kv-value">0 檔（完全空手觀望）</span></div>
+					<div class="kv-item"><span class="kv-label">處置後持股</span><span class="kv-value">0 檔（完全空手觀望）</span></div>
 					<div class="kv-item"><span class="kv-label">股票總市值</span><span class="kv-value">0 元（0.00%）</span></div>
-					<div class="kv-item"><span class="kv-label">現金儲備總額</span><span class="kv-value pos">492,813 元（100.00%）</span></div>
+					<div class="kv-item"><span class="kv-label">現金儲備總額</span><span class="kv-value pos">約 478,205 元（100.00%）</span></div>
 					<div class="kv-item"><span class="kv-label">總在險資金 H<sub>open</sub></span><span class="kv-value pos">0.00% &le; H<sub>max</sub> (0.0%) ✅</span></div>
 				</div>
-				<p style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: 0.5rem; margin-bottom: 0;">全面執行清倉後，在險資金完全歸零，徹底符合凱利風控在 Risk-Off 極限防禦下 H<sub>max</sub> = 0.0% 之數學約束條件。</p>
-			</div>
-		</section>
-
-		<!-- 風控複查與數學驗算 -->
-		<section class="section">
-			<h2 class="section-title">風控複查與數學驗算</h2>
-			<div class="sub-block">
-				<div class="sub-block-title">凱利方程式收縮閉包檢驗</div>
-				<p style="font-size: 0.875rem;">依據凱利資金管理嚴格定義：f* = (bp - q) / b。當市場多空總計數 S<sub>mkt</sub> &lt; 0 時，乘數 &kappa;<sub>regime</sub> = 0.00，故任何候選股票之實際分配風險預算 r<sub>actual</sub> = &kappa;<sub>regime</sub> &times; f* = 0.00%。次日開倉股數 N<sub>shares</sub> = 0，無條件阻斷任何買單。3 檔既有持股因已觸發 R<sub>t</sub> 破線及硬停損底線，市價全面出清收回 100% 現金流動性，資本得到最嚴密之數學保護。</p>
+				<p style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: 0.5rem; margin-bottom: 0;">當大盤計數跌至最低極值 S<sub>mkt</sub> = -5、帳戶回撤觸及 -12.65% 斷路器時，唯有冷酷砍倉保住剩餘本金與單一時間線存活權（Ergodicity），方能在未來順風局重新收割正期望值 Alpha。</p>
 			</div>
 		</section>
 	</main>
